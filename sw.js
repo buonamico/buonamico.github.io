@@ -1,4 +1,4 @@
-const CACHE = 'ms-portfolio-v1';
+const CACHE = 'db-site-v1';
 const ASSETS = [
   '/',
   '/index.html',
