@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Damian Buonamico — Executive Technology Strategist at Microsoft Argentina. AI, Data & Cloud for C-level leaders across Latin America." />
+  <meta property="og:title" content="Damián Buonamico · Tech Portfolio" />
+  <meta property="og:description" content="Executive Technology Strategist at Microsoft Argentina. 20+ years shaping AI, data and cloud into real business outcomes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://buonamico.github.io" />
+  <meta property="og:image" content="https://buonamico.github.io/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://buonamico.github.io/og-image.png" />
+  <meta name="theme-color" content="#00e5ff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <title>Damián Buonamico · Mind Map</title>
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://i.ytimg.com" />
+  <link rel="preconnect" href="https://s.ytimg.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>if(!sessionStorage.getItem('booted'))document.documentElement.classList.add('is-booting')</script>
+</head>
+<body>
+  <div id="read-progress" aria-hidden="true"></div>
+  <div id="boot-screen" aria-hidden="true"><div id="boot-lines"></div></div>
+
+  <!-- NAV -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="nav__logo" href="#top">MS</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="#about" data-i18n="nav_about">About</a></li>
+        <li><a href="#speaking" data-i18n="nav_speaking">Speaking</a></li>
+        <li><a href="#news" data-i18n="nav_news">In the News</a></li>
+        <li><a href="#media" data-i18n="nav_media">On Camera</a></li>
+        <li><a href="#podcast">Podcast</a></li>
+        <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language / Idioma">
+        <button class="lang-toggle__btn active" data-lang="en">EN</button>
+        <span class="lang-toggle__sep" aria-hidden="true">·</span>
+        <button class="lang-toggle__btn" data-lang="es">ES</button>
+      </div>
+    </nav>
+  </header>
+
+  <canvas id="hero-particles" aria-hidden="true"></canvas>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero" aria-labelledby="hero-name">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="hero__eyebrow">CTO | Tech Executive | Advisor | Speaker</p>
+          <h1 class="hero__name" id="hero-name">Damián Buonamico</h1>
+          <p class="hero__tagline">Turning Cloud, DataAAAAAA &amp; AI into real outcomes~</p>
+          <div class="hero__badges" aria-label="Social links">
+            <a href="https://github.com/buonamico" target="_blank" rel="noopener" class="badge">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+            <a href="https://twitter.com/Acatincho" target="_blank" rel="noopener" class="badge">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              Twitter / X
+            </a>
+            <a href="https://www.linkedin.com/in/Buonamico/" target="_blank" rel="noopener" class="badge">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </a>
+            <a href="https://www.instagram.com/tincho.Buonamico/" target="_blank" rel="noopener" class="badge">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+              </svg>
+              Instagram
+            </a>
+            <a href="https://www.youtube.com/@Damian.Buonamico" target="_blank" rel="noopener" class="badge">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+              YouTube
+            </a>
+          </div>
+        </div>
+        <div class="hero__photo-wrap" id="hero-photo-wrap">
+          <img src="profile.jpg" alt="Damian Buonamico" class="hero__photo" />
+          <video id="hero-glitch-video" src="glitch.mp4" class="hero__glitch-video" playsinline loop aria-hidden="true"></video>
+          <div class="hero__photo-scan" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 class="section__title" id="about-heading"><span data-i18n="about_heading">About Me</span></h2>
+        <div class="about__grid">
+          <div class="monitor-cyber">
+            <div class="screen-wrap" id="about-screen-wrap">
+              <div class="screen-scroll about__bio" data-i18n-html="about_bio">
+                <p>I&rsquo;ve been building things with technology for as long as I can remember.</p>
+                <p>My first encounter with a computer was at my public school in the early 90s, sitting in front of a <strong>Commodore 64</strong>. That&rsquo;s where I discovered <strong>LOGO</strong> &mdash; and where my first digital &ldquo;love&rdquo; was a tiny turtle moving across the screen, drawing shapes one command at a time.</p>
+                <p>A year later I got my first home PC &mdash; I was 10. I got a fabulous <strong>AT286 PC</strong>, powered by a blazing 20 MHz processor, equipped with a &ldquo;high-density&rdquo; 5&frac14;-inch floppy drive (1.2 MB), an amber monochrome monitor (yellow, for friends), and 1 MB of memory &mdash; and no hard drive at all. It even had one of those plastic covers you&rsquo;d put on when it wasn&rsquo;t in use, to keep it safe and dust-free.</p>
+                <p>Around the time I started secondary school, I discovered the <strong>internet</strong> &mdash; and suddenly the world had no borders. <strong>Email, IRC</strong>, people connecting from everywhere&hellip; it felt like <strong>magic</strong>. I spent most of my teenage years experimenting and building with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>, eventually turning that curiosity into income in the early days of the web.</p>
+                <p>Then the corporate chapter began. I joined bigger and bigger companies and, from day one, leaned into <strong>global delivery</strong> &mdash; long before it became the norm.</p>
+                <p>I&rsquo;ve seen the stack evolve from managing <strong>Novell</strong> networks to <strong>Windows</strong>, <strong>Unix</strong>, and <strong>Linux</strong> in traditional <strong>on-premise datacenters</strong>, to moving workloads to the cloud. From classic deployments to engineering everything as code.</p>
+                <p>And now we&rsquo;re entering the <strong>AI era</strong> &mdash; where infrastructure doesn&rsquo;t just run systems, it <strong>powers intelligence</strong>.</p>
+                <p>I&rsquo;ve operated at the intersection of building solutions and running them &mdash; while building teams that do both, across countries, regions, and time zones.</p>
+                <p>I&rsquo;ve had the privilege of working inside some of the <strong>world&rsquo;s largest technology companies</strong>, partnering with global organizations across industries and markets. That exposure shaped how I see technology: not as theory, but as something that behaves differently depending on context, <strong>culture</strong>, incentives, and execution.</p>
+                <p>I&rsquo;m currently an <strong>Executive Technology Strategist</strong> at <span class="hl-grad">Microsoft</span>, partnering with senior business leaders to translate data, AI, cloud, and security into measurable business outcomes. Previously, I led the <strong>Customer Success Data &amp; AI</strong> organization across <strong>Spanish South America (SSA)</strong> &mdash; Argentina, Chile, Bolivia, Colombia, Ecuador, Paraguay, Peru, and Uruguay &mdash; and served as <strong>CTO</strong> and member of the subsidiary <strong>Leadership Team</strong> in <span class="hl-grad">Argentina</span>, consistently focused on aligning technology strategy with business impact.</p>
+                <p>Before Microsoft, I was <strong>Global Leader of Multicloud Platforms</strong> at <span class="hl-grad">EY</span>, building products and services across hybrid and cloud environments throughout the U.S., Europe, and Asia. Earlier, I led the firm&rsquo;s <strong>Global Unix &amp; Linux team</strong>.</p>
+                <p>And before that, I built and scaled technology teams at <span class="hl-grad">IBM</span> during the early expansion of the Global Delivery Center, supporting U.S.-based clients &mdash; always from <span class="hl-grad">Argentina</span> to the world.</p>
+                <p>I hold a Bachelor&rsquo;s degree in Systems Analysis from <strong>ORT Argentina</strong>, that was later complemented by executive management programs at <strong>Universidad Torcuato Di Tella</strong> &amp; <strong>Universidad de San Andr&eacute;s</strong>, where I also served as thesis advisor for the Master&rsquo;s in Digital Business program. I also currently serve as <strong>board member</strong>, <strong>technical advisor</strong>, and <strong>fractional CTO</strong> for several startups.</p>
+                <p>I&rsquo;m an <strong>AI advocate</strong> &mdash; not in a hype-driven way, but with conviction. I believe AI is a transformative force that will fundamentally reshape how we work, decide, and build. That&rsquo;s why I speak frequently about its business and societal impact, participating in events and media both in Argentina and internationally &mdash; including Forbes, La Naci&oacute;n, Clar&iacute;n, &Aacute;mbito Financiero, Apertura, Information Technology, IDEA Management, Nerdearla, Campus Party, to name some.</p>
+                <p>Outside the office, I&rsquo;m lucky enough to be married to <strong>Vicky</strong> and to be <strong>Miranda</strong>&rsquo;s dad 🧡</p>
+                <p>We are <strong>foodies</strong> by nature and <strong>travelers</strong> by choice. We&rsquo;re really fond of receiving people at home and grilling delicious things, and we love discovering new places &amp; flavors. When we travel we&rsquo;re stubborn about one thing: remain travelers, never drift into tourist mode. That&rsquo;s how we stay curious. We try not just to visit places &mdash; we taste them. <strong>Culture</strong> can be layered, subtle, even hard to decode. But put people around a table and it gets real fast &mdash; shared plates, local markets, real conversations, at home or abroad.</p>
+                <p>As <strong>Anthony Bourdain</strong> said, food is one of the most honest ways to understand people.</p>
+                <p>That same mindset spills into the rest of my life. I&rsquo;m a habitual <strong>runner</strong> &mdash; no full marathon yet, but getting there sprint after sprint. I play <strong>football</strong> at a very amateur level (heavy on enthusiasm, light on talent). I&rsquo;m a <strong>coffee nerd</strong>. And I&rsquo;m unapologetically devoted to a properly made <strong>Negroni</strong> &mdash; no shortcuts, ever.</p>
+                <p>Because whether it&rsquo;s work in technology, travel, sport, coffee or cocktails, I&rsquo;m drawn to things that reward patience, craft and consistency.</p>
+              </div>
+            </div>
+            <div class="monitor-cyber__chin">
+              <span class="monitor-cyber__brand">ROOT@TINCHO — ~/about.md</span>
+              <div class="monitor-cyber__btns">
+                <div class="btn-square"></div><div class="btn-square"></div>
+                <div class="btn-round"></div><div class="btn-round"></div>
+                <div class="btn-round btn-round--power"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLIC SPEAKING -->
+    <section class="section speaking" id="speaking" aria-labelledby="speaking-heading">
+      <div class="container">
+        <h2 class="section__title" id="speaking-heading"><span data-i18n="speaking_heading">Public Speaking &amp; Events</span></h2>
+        <p class="section__subtitle" data-i18n="speaking_subtitle">Selected appearances at conferences, summits, and media events.</p>
+        <div class="table-board">
+          <div class="scattered-grid">
+          <!-- 2026 -->
+          <figure class="polaroid-d"><img src="img/gallery/Senado.jpeg" alt="Senado de la Nación · IA Mar 2026" loading="lazy" decoding="async" /><figcaption>Senado de la Nación · Mar 2026</figcaption></figure>
+          <!-- 2025 -->
+          <figure class="polaroid-d"><img src="img/gallery/20251120_091007.jpg" alt="Microsoft Ignite Nov 2025" loading="lazy" decoding="async" /><figcaption>Microsoft Ignite · Nov 2025</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/20251027_122924(0).jpg" alt="Con Fredi y Agusto Oct 2025" loading="lazy" decoding="async" /><figcaption>Con Fredi y Agusto · Oct 2025</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/20250213_134119.jpg" alt="Redmond Feb 2025" loading="lazy" decoding="async" /><figcaption>Redmond · Feb 2025</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/20250211_090731.jpg" alt="Microsoft HQ Feb 2025" loading="lazy" decoding="async" /><figcaption>Microsoft HQ · Feb 2025</figcaption></figure>
+          <!-- 2024 -->
+          <figure class="polaroid-d"><img src="img/gallery/bio-2.jpg" alt="Cafe Copilot con Influencers Oct 2024" loading="lazy" decoding="async" /><figcaption>Cafe Copilot con Influencers · Oct 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-team-oct24.jpg" alt="Team Oct 2024" loading="lazy" decoding="async" /><figcaption>Team · Oct 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Tech Forum 1.jpg" alt="Tech Forum Argentina Oct 2024" loading="lazy" decoding="async" /><figcaption>Tech Forum · Oct 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/3.jpg" alt="Con Santi Bilinkis Oct 2024" loading="lazy" decoding="async" /><figcaption>Con Santi Bilinkis · Oct 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Nerdearla 2024.jpg" alt="Speaking at Nerdearla 2024" loading="lazy" decoding="async" /><figcaption>Nerdearla 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-event-jul24b.jpg" alt="Event Jul 2024" loading="lazy" decoding="async" /><figcaption>Event · Jul 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-event-jul24a.jpg" alt="Event Jul 2024" loading="lazy" decoding="async" /><figcaption>Event · Jul 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-panel-apr24.jpg" alt="EY Panel with Nestor Nocetti Apr 2024" loading="lazy" decoding="async" /><figcaption>EY Panel with Nestor Nocetti · Apr 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-eou0.jpg" alt="Team Feb 2024" loading="lazy" decoding="async" /><figcaption>Team · Feb 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-euo2.jpg" alt="Team Feb 2024" loading="lazy" decoding="async" /><figcaption>Team · Feb 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-ebc1.jpg" alt="EBC Microsoft Feb 2024" loading="lazy" decoding="async" /><figcaption>EBC · Feb 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-ebc4.jpg" alt="EBC Microsoft Feb 2024" loading="lazy" decoding="async" /><figcaption>EBC · Feb 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-ebc8.jpg" alt="EBC Microsoft Feb 2024" loading="lazy" decoding="async" /><figcaption>EBC · Feb 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-ebc11.jpg" alt="EBC Microsoft Feb 2024" loading="lazy" decoding="async" /><figcaption>EBC · Feb 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-team-feb24.jpg" alt="Team Feb 2024" loading="lazy" decoding="async" /><figcaption>Team · Feb 2024</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-irizar.jpg" alt="Almirante Irizar Jan 2024" loading="lazy" decoding="async" /><figcaption>Almirante Irizar · 2024</figcaption></figure>
+          <!-- 2023 -->
+          <figure class="polaroid-d"><img src="img/gallery/Nerdearla 2023.jpg" alt="Speaking at Nerdearla 2023" loading="lazy" decoding="async" /><figcaption>Nerdearla 2023</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-ssa-elt.jpg" alt="SSA ELT Microsoft 2023" loading="lazy" decoding="async" /><figcaption>SSA ELT · 2023</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-ms-github-jun23.jpg" alt="Microsoft GitHub Jun 2023" loading="lazy" decoding="async" /><figcaption>Microsoft · Jun 2023</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/ORT 1.png" alt="ORT Microsoft May 2023" loading="lazy" decoding="async" /><figcaption>ORT · May 2023</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/20230927_152522.jpg" alt="Microsoft Sep 2023" loading="lazy" decoding="async" /><figcaption>Microsoft · Sep 2023</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/imagen (1).png" alt="Globant Mind Data AI Sep 2023" loading="lazy" decoding="async" /><figcaption>Globant · Sep 2023</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-1.jpg" alt="2023" loading="lazy" decoding="async" /><figcaption>2023</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-idea1.jpg" alt="Idea event speakers 2023" loading="lazy" decoding="async" /><figcaption>Idea · 2023</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/TECO Summit.jpeg" alt="TECO Summit" loading="lazy" decoding="async" /><figcaption>TECO Summit · 2023</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Migoya.jpg" alt="With Migoya" loading="lazy" decoding="async" /><figcaption>With Migoya</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/2023-gcba-thomas.jpg" alt="GCBA & Thomas" loading="lazy" decoding="async" /><figcaption>GCBA & Thomas</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Idea 2.jpg" alt="Idea event" loading="lazy" decoding="async" /><figcaption>Idea</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/11.jpg" alt="Panel discussion" loading="lazy" decoding="async" /><figcaption>Panel</figcaption></figure>
+          <!-- 2022 -->
+          <figure class="polaroid-d"><img src="img/gallery/Nerdearla 2022.jpg" alt="Speaking at Nerdearla 2022" loading="lazy" decoding="async" /><figcaption>Nerdearla 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-team-lunch-dec22.jpg" alt="Team lunch Dec 2022" loading="lazy" decoding="async" /><figcaption>Team · Dec 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/1672492527690.jpeg" alt="Team Hybrid Dec 2022" loading="lazy" decoding="async" /><figcaption>Team Hybrid · Dec 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-nerdearty.jpg" alt="Nerdearty 2022" loading="lazy" decoding="async" /><figcaption>Nerdearty · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-apertura2.jpg" alt="Apertura 2022" loading="lazy" decoding="async" /><figcaption>Apertura · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-3.jpg" alt="Microsoft event 2022" loading="lazy" decoding="async" /><figcaption>Microsoft · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-obra.jpg" alt="New office 2022" loading="lazy" decoding="async" /><figcaption>New Office · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Worktech 1.jpg" alt="WorkTech 2022" loading="lazy" decoding="async" /><figcaption>WorkTech · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/worktech 2.jpg" alt="WorkTech 2022" loading="lazy" decoding="async" /><figcaption>WorkTech · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/20221027_123413.jpg" alt="WorkTech Oct 2022" loading="lazy" decoding="async" /><figcaption>WorkTech · Oct 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Forbes Summit.png" alt="Forbes Summit Oct 2022" loading="lazy" decoding="async" /><figcaption>Forbes Summit · Oct 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-ms-event-may22.jpg" alt="Microsoft event May 2022" loading="lazy" decoding="async" /><figcaption>Microsoft · May 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-slt-office.jpg" alt="SLT office May 2022" loading="lazy" decoding="async" /><figcaption>SLT · May 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Cita - El Diseño del Mundo.png" alt="El Diseño del Mundo book quote 2022" loading="lazy" decoding="async" /><figcaption>El Diseño del Mundo · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/US Embassy.jpg" alt="US Embassy event" loading="lazy" decoding="async" /><figcaption>US Embassy · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Forbes.jpg" alt="Forbes Summit 2022" loading="lazy" decoding="async" /><figcaption>Forbes Summit · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/2022-meli-team.jpg" alt="MELI Team 2022" loading="lazy" decoding="async" /><figcaption>MELI Team · 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-ms-team-mar22.jpg" alt="Microsoft team Mar 2022" loading="lazy" decoding="async" /><figcaption>Microsoft · Mar 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Screenshot_20220331-151743_Acrobat for Samsung.jpg" alt="Forbes Argentina Mar 2022" loading="lazy" decoding="async" /><figcaption>Forbes Argentina · Mar 2022</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/Idea 1.jpeg" alt="Idea event" loading="lazy" decoding="async" /><figcaption>Idea · 2022</figcaption></figure>
+          <!-- 2021 -->
+          <figure class="polaroid-d"><img src="img/gallery/bio-ms30.jpg" alt="Microsoft 30 años Dec 2021" loading="lazy" decoding="async" /><figcaption>Microsoft 30 años · 2021</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-smart-data2.jpg" alt="Smart Data 2021" loading="lazy" decoding="async" /><figcaption>Smart Data · 2021</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-autos3.jpg" alt="Cronista Autos 2021" loading="lazy" decoding="async" /><figcaption>Cronista · 2021</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-infotech.jpg" alt="Infotechnology 2021" loading="lazy" decoding="async" /><figcaption>Infotechnology · 2021</figcaption></figure>
+          <figure class="polaroid-d"><img src="img/gallery/bio-infotech-metaverse.jpg" alt="Infotechnology Metaverse 2022" loading="lazy" decoding="async" /><figcaption>Infotechnology Metaverse · 2022</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IN THE NEWS -->
+    <section class="section news" id="news" aria-labelledby="news-heading">
+      <div class="container">
+        <h2 class="section__title" id="news-heading"><span data-i18n="news_heading">In the News</span></h2>
+        <p class="section__subtitle" data-i18n="news_subtitle">Press coverage and media appearances over the years.</p>
+        <div class="accordion" id="news-accordion">
+
+          <!-- 2026 -->
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="true" aria-controls="news-2026" id="trigger-2026">
+              <span class="accordion__year">2026</span>
+              <svg class="accordion__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="accordion__panel" id="news-2026" role="region" aria-labelledby="trigger-2026">
+              <ul class="news-links" role="list">
+                <li><a href="https://www.infobae.com/movant/2026/02/01/inteligencia-artificial-y-logistica-la-carrera-cultural-detras-de-la-inmediatez/" class="news-link" target="_blank" rel="noopener">Inteligencia artificial y logística: la carrera cultural detrás de la inmediatez</a> <span class="news-source">@ Infobae</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2025 -->
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="news-2025" id="trigger-2025">
+              <span class="accordion__year">2025</span>
+              <svg class="accordion__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="accordion__panel" id="news-2025" role="region" aria-labelledby="trigger-2025" hidden>
+              <ul class="news-links" role="list">
+                <li><a href="https://www.elmarplatense.com/worksummit-reunio-a-500-personas-en-un-evento-sobre-empleo-e-inteligencia-artificial" class="news-link" target="_blank" rel="noopener">WorkSummit reunió a 500 personas en un evento sobre empleo e inteligencia artificial</a> <span class="news-source">@ El Marplatense</span></li>
+                <li><a href="https://puntonoticias.com/se-viene-worksummit-un-evento-sobre-inteligencia-artificial-y-empleo-en-mar-del-plata/" class="news-link" target="_blank" rel="noopener">Se viene WorkSummit, un evento sobre inteligencia artificial y empleo en Mar del Plata</a> <span class="news-source">@ Punto Noticias</span></li>
+                <li><a href="https://www.iproup.com/innovacion/61885-la-ia-como-copiloto-como-las-firmas-redefinen-roles" class="news-link" target="_blank" rel="noopener">La IA como copiloto: cómo las firmas redefinen roles</a> <span class="news-source">@ iProup</span></li>
+                <li><a href="https://www.radiofarodelnoroeste.es/municipios/valleseco/item/35025-hispanocan-2025-en-valleseco-donde-la-ia-y-la-innovacion-construyen-futuro" class="news-link" target="_blank" rel="noopener">HISPANOCAN 2025 en Valleseco: donde la IA y la innovación construyen futuro</a> <span class="news-source">@ Radio Faro del Noroeste</span></li>
+                <li><a href="https://consejo.org.ar/jornada-80-aniversario" class="news-link" target="_blank" rel="noopener">Jornada 80 Aniversario · CPCECABA</a> <span class="news-source">@ Consejo Ciencias Económicas CABA</span></li>
+                <li><a href="https://www.forbesargentina.com/summit/proveedores-mineros-transformacion-fuerza-silenciosa-tiempos-ia-n72543" class="news-link" target="_blank" rel="noopener">Proveedores mineros: transformación, la fuerza silenciosa en tiempos de IA</a> <span class="news-source">@ Forbes Argentina</span></li>
+                <li><a href="https://es-us.noticias.yahoo.com/proveedores-mineros-transformaci%C3%B3n-fuerza-silenciosa-144500457.html" class="news-link" target="_blank" rel="noopener">Proveedores mineros: transformación, la fuerza silenciosa en tiempos de IA</a> <span class="news-source">@ Yahoo Noticias</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="news-2024" id="trigger-2024">
+              <span class="accordion__year">2024</span>
+              <svg class="accordion__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="accordion__panel" id="news-2024" role="region" aria-labelledby="trigger-2024" hidden>
+              <ul class="news-links" role="list">
+                <li><a href="https://noticias.uai.edu.ar/facultades/tecnolog%C3%ADa-inform%C3%A1tica/2024/marti-n-Buonamico-director-data-ai-microsoft-hispanic-south-am%C3%A9rica-vamos-a-empezar-a-consumir-tecnolog%C3%ADa-a-otra-escala/" class="news-link" target="_blank" rel="noopener">Damián Buonamico: "Vamos a empezar a consumir tecnología a otra escala"</a> <span class="news-source">@ UAI Noticias</span></li>
+                <li><a href="https://ciudadesiberoamericanas.org/2024/04/10/buenos-aires-promueve-la-aplicacion-de-la-inteligencia-artificial-en-las-ciudades-iberoamericanas-con-el-apoyo-de-ucci/" class="news-link" target="_blank" rel="noopener">Buenos Aires promueve la aplicación de la IA en las ciudades iberoamericanas</a> <span class="news-source">@ UCCI</span></li>
+                <li><a href="https://www.argentina.gob.ar/noticias/encuentro-entre-la-subsecretaria-ti-y-microsoft-argentina-para-avanzar-en-el" class="news-link" target="_blank" rel="noopener">Encuentro entre la Subsecretaría TI y Microsoft Argentina para avanzar en ciberseguridad</a> <span class="news-source">@ Argentina.gob.ar</span></li>
+                <li><a href="https://aiproduct.engineer/podcast/aipe-microsoft-buonamico" class="news-link" target="_blank" rel="noopener">Damian Buonamico from Microsoft · AI Product Engineer Podcast</a> <span class="news-source">@ AI Product Engineer</span></li>
+                <li><a href="https://www.ambito.com/ambito-debate/2024/innovacion-tecnologia-agosto/buonamico-estamos-viviendo-la-democratizacion-real-del-acceso-la-tecnologia-la-ia-como-vehiculo" class="news-link" target="_blank" rel="noopener">Estamos viviendo la democratización real del acceso a la tecnología, la IA como vehículo</a> <span class="news-source">@ Ámbito</span></li>
+                <li><a href="https://www.ambito.com/ambito-debate/la-democratizacion-la-tecnologia-y-la-importancia-adaptarse-la-inteligencia-artificial-n6048144" class="news-link" target="_blank" rel="noopener">La democratización de la tecnología y la importancia de adaptarse a la inteligencia artificial</a> <span class="news-source">@ Ámbito</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2023 -->
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="news-2023" id="trigger-2023">
+              <span class="accordion__year">2023</span>
+              <svg class="accordion__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="accordion__panel" id="news-2023" role="region" aria-labelledby="trigger-2023" hidden>
+              <ul class="news-links" role="list">
+                <li><a href="https://www.innovaciondigital360.com/eventos/sebastian-barbich-de-kyndryl-consult-el-potencial-para-incorporar-la-ia-a-los-negocios-es-abismal/" class="news-link" target="_blank" rel="noopener">El potencial para incorporar la IA a los negocios es abismal</a> <span class="news-source">@ InnovaciónDigital360</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="news-2022" id="trigger-2022">
+              <span class="accordion__year">2022</span>
+              <svg class="accordion__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="accordion__panel" id="news-2022" role="region" aria-labelledby="trigger-2022" hidden>
+              <ul class="news-links" role="list">
+                <li><a href="https://news.microsoft.com/es-xl/ypf-explora-la-computacion-cuantica-para-el-desarrollo-de-la-transicion-energetica-junto-a-microsoft/" class="news-link" target="_blank" rel="noopener">YPF explora la computación cuántica para el desarrollo de la transición energética junto a Microsoft</a> <span class="news-source">@ Microsoft News</span></li>
+                <li><a href="https://www.forbesargentina.com/summit/agricultura-precision-relevancia-medicion-campo-n23127" class="news-link" target="_blank" rel="noopener">Agricultura de precisión: la relevancia de la medición en el campo</a> <span class="news-source">@ Forbes Argentina</span></li>
+                <li><a href="https://www.forbessummit.com.ar/ponente/1385/buonamico" class="news-link" target="_blank" rel="noopener">Damian Buonamico en Forbes Summit</a> <span class="news-source">@ Forbes Summit</span></li>
+                <li><a href="https://www.cronista.com/infotechnology/it-business/exclusivo-14-empresarios-top-del-pais-relevan-en-que-sector-clave-hay-que-invertir/" class="news-link" target="_blank" rel="noopener">Exclusivo: 14 empresarios top del país relevan en qué sector clave hay que invertir</a> <span class="news-source">@ Cronista</span></li>
+                <li><a href="https://campus.ort.edu.ar/articulo/1821217/conferencia-metaverso-para-empresas" class="news-link" target="_blank" rel="noopener">Conferencia: Metaverso para empresas</a> <span class="news-source">@ ORT</span></li>
+                <li><a href="https://www.bnamericas.com/es/noticias/ypf-explora-la-computacion-cuantica-para-el-desarrollo-de-la-transicion-energetica-junto-a-microsoft" class="news-link" target="_blank" rel="noopener">YPF explora la computación cuántica junto a Microsoft</a> <span class="news-source">@ BNamericas</span></li>
+                <li><a href="https://www.lanacion.com.ar/economia/las-estrategias-de-las-empresas-para-sobrevivir-al-cambio-constante-nid12062022/" class="news-link" target="_blank" rel="noopener">Las estrategias de las empresas para sobrevivir al cambio constante</a> <span class="news-source">@ La Nación</span></li>
+                <li><a href="http://www.clarin.com/rural/red-mujeres-rurales-dijo-presente-palermo_0_SalTLWOcni.amp.html" class="news-link" target="_blank" rel="noopener">Red Mujeres Rurales dijo presente en Palermo</a> <span class="news-source">@ Clarín</span></li>
+                <li><a href="https://www.forbesargentina.com/liderazgo/el-equipo-microsoft-festeja-30-anos-empresa-pais-n14318" class="news-link" target="_blank" rel="noopener">El equipo de Microsoft festeja 30 años en la empresa en el país</a> <span class="news-source">@ Forbes Argentina</span></li>
+                <li><a href="https://www.clarin.com/rural/plantium-gano-premio-excelencia-agropecuaria_0_DAYMZTx2g.html" class="news-link" target="_blank" rel="noopener">Plantium ganó el premio a la excelencia agropecuaria</a> <span class="news-source">@ Clarín</span></li>
+                <li><a href="https://www.lanacion.com.ar/economia/el-poder-transformador-de-la-innovacion-impacto-de-lleno-en-los-modelos-de-negocio-nid01062022/" class="news-link" target="_blank" rel="noopener">El poder transformador de la innovación impactó de lleno en los modelos de negocio</a> <span class="news-source">@ La Nación</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2021 -->
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false" aria-controls="news-2021" id="trigger-2021">
+              <span class="accordion__year">2021</span>
+              <svg class="accordion__icon" aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="accordion__panel" id="news-2021" role="region" aria-labelledby="trigger-2021" hidden>
+              <ul class="news-links" role="list">
+                <li><a href="https://www.lanacion.com.ar/economia/campo/esta-es-la-mejor-empresa-agtech-en-2021-nid06122021/" class="news-link" target="_blank" rel="noopener">Esta es la mejor empresa AgTech en 2021</a> <span class="news-source">@ La Nación</span></li>
+                <li><a href="https://www.infotechnology.com/innovacion/metaverso-todas-las-claves-para-entenderlo-y-que-empresa-argentina-lo-usa/" class="news-link" target="_blank" rel="noopener">Metaverso: todas las claves para entenderlo</a> <span class="news-source">@ Infotechnology</span></li>
+                <li><a href="https://www.lanacion.com.ar/economia/campo/premio-la-nacion-banco-galicia-a-la-excelencia-agropecuaria-estos-son-los-finalistas-nid22112021/" class="news-link" target="_blank" rel="noopener">Premio La Nación-Banco Galicia a la excelencia agropecuaria</a> <span class="news-source">@ La Nación</span></li>
+                <li><a href="https://www.cronista.com/rpm/mercado/van-a-jubilar-a-los-conductores-los-autos-que-se-manejan-solos-cada-vez-estan-mas-cerca/" class="news-link" target="_blank" rel="noopener">¿Van a jubilar a los conductores? Los autos que se manejan solos cada vez están más cerca</a> <span class="news-source">@ Cronista</span></li>
+                <li><a href="https://www-lanacion-com-ar.cdn.ampproject.org/c/s/www.lanacion.com.ar/economia/negocios/analisis-de-datos-y-humanizacion-de-la-tecnologia-las-nuevas-oportunidades-de-negocios-nid12102021/?outputType=amp" class="news-link" target="_blank" rel="noopener">Análisis de datos y humanización de la tecnología</a> <span class="news-source">@ La Nación</span></li>
+                <li><a href="https://www.infobae.com/deportes/2021/05/11/vuelven-los-hinchas-a-la-liga-nacional-de-basquet-la-iniciativa-que-emula-a-la-nba/" class="news-link" target="_blank" rel="noopener">Vuelven los hinchas a la Liga Nacional de Básquet</a> <span class="news-source">@ Infobae</span></li>
+                <li><a href="https://news.microsoft.com/es-xl/innovar-a-traves-de-entornos-hibridos-y-de-nube-multiple-con-nuevas-capacidades-de-azure-arc/" class="news-link" target="_blank" rel="noopener">Innovar a través de entornos híbridos con Azure Arc</a> <span class="news-source">@ Microsoft News</span></li>
+                <li><a href="https://www.iprofesional.com/management/347574-dia-del-programador-carrera-con-buenos-sueldos-y-salida-laboral" class="news-link" target="_blank" rel="noopener">Día del programador: carrera con buenos sueldos y salida laboral</a> <span class="news-source">@ iProfesional</span></li>
+                <li><a href="https://www.lanacion.com.ar/economia/negocios/realidad-virtual-la-nueva-herramienta-para-vender-casas-y-viajes-nid14052021/" class="news-link" target="_blank" rel="noopener">Realidad virtual: la nueva herramienta para vender casas y viajes</a> <span class="news-source">@ La Nación</span></li>
+                <li><a href="https://www.itsitio.com/us/como-sacar-provecho-de-los-servicios-de-nube-publica-de-inteligencia-artificial/" class="news-link" target="_blank" rel="noopener">Cómo sacar provecho de los servicios de nube pública de IA</a> <span class="news-source">@ ITSitio</span></li>
+                <li><a href="https://www.lanacion.com.ar/economia/campo/excelencia-agropecuaria-el-campo-consagro-a-los-mejores-de-2021-nid24112021/" class="news-link" target="_blank" rel="noopener">Excelencia agropecuaria: el campo consagró a los mejores de 2021</a> <span class="news-source">@ La Nación</span></li>
+                <li><a href="https://www.iproup.com/innovacion/27660-creadores-de-pokemon-go-trabajan-en-el-metaverso-del-mundo-real" class="news-link" target="_blank" rel="noopener">Creadores de Pokémon Go trabajan en el metaverso del mundo real</a> <span class="news-source">@ iProup</span></li>
+                <li><a href="https://www.revistaestrategas.com.ar/contenidos/7779/el-covid-cambi%C3%B3-todo-y-trajo-el-desaf%C3%ADo-de-una-nueva-cobertura-desconocida-para-las-art" class="news-link" target="_blank" rel="noopener">El COVID cambió todo y trajo el desafío de una nueva cobertura</a> <span class="news-source">@ Revista Estrategas</span></li>
+                <li><a href="https://www.on24.com.ar/vida-ocio/lo-que-viene-teletrabajar-desde-un-espacio-virtual/" class="news-link" target="_blank" rel="noopener">Lo que viene: teletrabajar desde un espacio virtual</a> <span class="news-source">@ On24</span></li>
+                <li><a href="https://news.microsoft.com/es-xl/los-hinchas-de-la-liga-nacional-de-basquet-vuelven-a-la-cancha-a-traves-de-microsoft-teams/" class="news-link" target="_blank" rel="noopener">Los hinchas de la Liga Nacional de Básquet vuelven a la cancha a través de Microsoft Teams</a> <span class="news-source">@ Microsoft News</span></li>
+                <li><a href="https://dplnews.com/buonamico-es-el-nuevo-cto-en-microsoft-argentina/" class="news-link" target="_blank" rel="noopener">Damián Buonamico es el nuevo CTO en Microsoft Argentina</a> <span class="news-source">@ DPL News</span></li>
+                <li><a href="https://www.canal-ar.com.ar/29301-buonamico-es-el-nuevo-CTO-en-Microsoft-Argentina.html" class="news-link" target="_blank" rel="noopener">Damián Buonamico es el nuevo CTO en Microsoft Argentina</a> <span class="news-source">@ Canal AR</span></li>
+              </ul>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MEDIA -->
+    <section class="section media-section" id="media" aria-labelledby="media-heading">
+      <div class="container">
+        <h2 class="section__title" id="media-heading"><span data-i18n="media_heading">On Camera</span></h2>
+        <p class="section__sub" data-i18n="media_sub">Interviews · Podcasts · Talks</p>
+        <div class="film-outer">
+          <div class="film-sprocket film-sprocket--top">
+            <span class="film-strip-label">ACATINCHO · 135mm · ON CAMERA · ©DamianBuonamico</span>
+          </div>
+          <div class="film-inner">
+          <div class="media-grid film-grid">
+
+          <!-- VIDEO CARDS -->
+
+          <article class="media-card" data-vid="bdq9EQc4uHc" data-title="Exposición Senado de la Nación · Inteligencia Artificial" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/bdq9EQc4uHc/hqdefault.jpg" alt="Exposición Senado de la Nación sobre Inteligencia Artificial" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Exposición Senado de la Nación · Inteligencia Artificial · Mar 2026</p>
+          </article>
+
+          <article class="media-card" data-vid="xEUHbbHAyD4" data-title="Director de Microsoft habla sobre Estrategia IA para empresas · IA sin humo" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/xEUHbbHAyD4/hqdefault.jpg" alt="Director de Microsoft habla sobre Estrategia IA para empresas IA sin humo" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Director de Microsoft habla sobre Estrategia IA para empresas · IA sin humo</p>
+          </article>
+
+
+          <article class="media-card" data-vid="aRa7kat8jN8" data-title="Un emprendedor puede tener las mismas herramientas de IA que CHEVRON" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/aRa7kat8jN8/hqdefault.jpg" alt="Un emprendedor puede tener las mismas herramientas de IA que CHEVRON" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Un emprendedor puede tener las mismas herramientas de IA que CHEVRON</p>
+          </article>
+
+          <article class="media-card" data-vid="e0iPtAKXfUc" data-start="7780" data-title="Jornada Power BI, Excel con IA y Finanzas · CPCECABA" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/e0iPtAKXfUc/hqdefault.jpg" alt="Jornada Power BI Excel con IA y Finanzas CPCECABA" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Jornada Power BI, Excel con IA y Finanzas · CPCECABA</p>
+          </article>
+
+          <article class="media-card" data-vid="h14PsR-6Ryg" data-title="Congreso AI Innovation Summit · Google &amp; Microsoft" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/h14PsR-6Ryg/hqdefault.jpg" alt="Congreso AI Innovation Summit Google Microsoft" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Congreso AI Innovation Summit · Google &amp; Microsoft</p>
+          </article>
+
+          <article class="media-card" data-vid="6I6zUwnhfJM" data-title="HISPANOCAN 2025 · Televisión Canaria" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/6I6zUwnhfJM/hqdefault.jpg" alt="HISPANOCAN 2025 Televisión Canaria" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">HISPANOCAN 2025 · Televisión Canaria</p>
+          </article>
+
+          <article class="media-card" data-vid="P5_Zdx-4KPc" data-start="4322" data-title="CIITI 2025 · Bloque Arquitectura" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/P5_Zdx-4KPc/hqdefault.jpg" alt="CIITI 2025 Bloque Arquitectura" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">CIITI 2025 · Bloque Arquitectura</p>
+          </article>
+
+          <article class="media-card" data-vid="RL4JGaI0w8U" data-title="Tech Forum Argentina" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/RL4JGaI0w8U/hqdefault.jpg" alt="Tech Forum Argentina" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Tech Forum Argentina</p>
+          </article>
+
+          <article class="media-card" data-vid="hLxDYo3j-7M" data-title="Gen-AI Revolution Year II · 10mo aniversario de Nerdearla" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/hLxDYo3j-7M/hqdefault.jpg" alt="Gen-AI Revolution Year II Nerdearla" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Gen-AI Revolution Year II · 10mo aniversario de Nerdearla</p>
+          </article>
+
+          <article class="media-card" data-vid="Ww6Q3eC1InY" data-title="Los secretos de la IA desde Microsoft · ¿Ya nos superó?" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/Ww6Q3eC1InY/hqdefault.jpg" alt="Los secretos de la IA desde Microsoft" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Los secretos de la IA desde Microsoft · ¿Ya nos superó?</p>
+          </article>
+
+          <article class="media-card" data-vid="2Fsi0fgcp-g" data-title="Demo OpenAI o1 · Generating Code" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/2Fsi0fgcp-g/hqdefault.jpg" alt="Demo OpenAI o1 generating code" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Demo OpenAI o1 · Generating Code</p>
+          </article>
+
+          <article class="media-card" data-vid="5b9F4UYxbuo" data-title="Innovación &amp; Tecnología · Ámbito debate" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/5b9F4UYxbuo/hqdefault.jpg" alt="Innovación Tecnología Ámbito debate" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Innovación &amp; Tecnología · Ámbito debate</p>
+          </article>
+
+          <article class="media-card" data-vid="MDBh1b5yTW0" data-start="10361" data-title="NXT Conference · Beyond Data &amp; AI: What's NXT?" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/MDBh1b5yTW0/hqdefault.jpg" alt="NXT Conference Beyond Data AI Globant" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">NXT Conference · Beyond Data &amp; AI: What's NXT?</p>
+          </article>
+
+          <article class="media-card" data-vid="OqRRTb4s36Q" data-title="Talento Tech · Entrevista" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/OqRRTb4s36Q/hqdefault.jpg" alt="Talento Tech Entrevista" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Talento Tech · Entrevista</p>
+          </article>
+
+          <article class="media-card" data-vid="tm8uz9baUnM" data-title="Conectado Talento Tech · Día 2" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/tm8uz9baUnM/hqdefault.jpg" alt="Conectado Talento Tech Día 2" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Conectado Talento Tech · Día 2</p>
+          </article>
+
+          <article class="media-card" data-vid="1kTqIWFfkpI" data-title="Exclusiva · Director de IA de Microsoft y cómo aplicar IA en empresas" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/1kTqIWFfkpI/hqdefault.jpg" alt="Exclusiva Director IA Microsoft aplicar IA en empresas" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Exclusiva · Director de IA de Microsoft y cómo aplicar IA en empresas</p>
+          </article>
+
+          <article class="media-card" data-vid="w7e-PzM2M2s" data-title="El futuro está entre nosotros · La (Re)Evolución del AI Generativo" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/w7e-PzM2M2s/hqdefault.jpg" alt="El futuro está entre nosotros La Re Evolución del AI Generativo" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">El futuro está entre nosotros · La (Re)Evolución del AI Generativo</p>
+          </article>
+
+          <article class="media-card" data-vid="ICsf4yirieA" data-title="Modelos Generativos de Lenguaje para Empresas con Azure OpenAI" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/ICsf4yirieA/hqdefault.jpg" alt="Modelos generativos lenguaje Azure OpenAI" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Modelos Generativos de Lenguaje para Empresas con Azure OpenAI</p>
+          </article>
+
+          <article class="media-card" data-vid="ump8Hd8_22E" data-title="Futura Nerdearla" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/ump8Hd8_22E/hqdefault.jpg" alt="Futura Nerdearla" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Futura Nerdearla</p>
+          </article>
+
+          <article class="media-card" data-vid="NVxP2DfsX_A" data-title="La (Re)Evolución del AI-Gen, los Copilotos y la creatividad algorítmica" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/NVxP2DfsX_A/hqdefault.jpg" alt="La Re Evolución del AI-Gen Copilotos creatividad algorítmica" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">La (Re)Evolución del AI-Gen, los Copilotos y la creatividad algorítmica</p>
+          </article>
+
+          <article class="media-card" data-vid="44CmL8VdLAY" data-title="Telecom SummIT 2023 · Inteligencia Artificial" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/44CmL8VdLAY/hqdefault.jpg" alt="Telecom SummIT 2023 Inteligencia Artificial" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Telecom SummIT 2023 · Inteligencia Artificial</p>
+          </article>
+
+          <article class="media-card" data-vid="J4_Vfif9uDc" data-title="Telecom SummIT · Entrevista Director Data &amp; AI, Microsoft" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/J4_Vfif9uDc/hqdefault.jpg" alt="Telecom SummIT Entrevista Director Data AI Microsoft" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Telecom SummIT · Entrevista Director Data &amp; AI, Microsoft</p>
+          </article>
+
+          <article class="media-card" data-vid="8mhs8rzab84" data-title="Demo Soul Machines · El Futuro Está Entre Nosotros" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/8mhs8rzab84/hqdefault.jpg" alt="Demo Soul Machines" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Demo Soul Machines · El Futuro Está Entre Nosotros</p>
+          </article>
+
+          <article class="media-card" data-vid="hEEQRH0RMAc" data-start="1372" data-title="Telecom SummIT 2023 · La tecnología se vivió" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/hEEQRH0RMAc/hqdefault.jpg" alt="Telecom SummIT 2023" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Telecom SummIT 2023 · La tecnología se vivió</p>
+          </article>
+
+          <article class="media-card" data-vid="uVSAqPbVa6c" data-title="ImpuestosIDEA 2023 · IA + RPA y el futuro del profesional tributarista" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/uVSAqPbVa6c/hqdefault.jpg" alt="ImpuestosIDEA 2023 IA RPA tributarista" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">ImpuestosIDEA 2023 · IA + RPA y el futuro del profesional tributarista</p>
+          </article>
+
+          <article class="media-card" data-vid="VQzAW2NM4Dg" data-title="La (Re)Evolución de la IA Generativa" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/VQzAW2NM4Dg/hqdefault.jpg" alt="La Re Evolución de la Inteligencia Artificial Generativa" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">La (Re)Evolución de la IA Generativa</p>
+          </article>
+
+          <article class="media-card" data-vid="tpI4kZnCIu8" data-title="Webinar AI" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/tpI4kZnCIu8/hqdefault.jpg" alt="Webinar AI" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Webinar AI</p>
+          </article>
+
+          <article class="media-card" data-vid="0RVMy4NJt_k" data-title="Micro entrevista · Thomas Dohmke, CEO de GitHub sobre AI y Copilot" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/0RVMy4NJt_k/hqdefault.jpg" alt="Thomas Dohmke CEO GitHub AI Copilot" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Micro entrevista · Thomas Dohmke, CEO de GitHub sobre AI y Copilot</p>
+          </article>
+
+          <article class="media-card" data-vid="aK6r24o9W_I" data-title="ExperienciaIDEA 2023 · IA: Ayer ciencia ficción, hoy realidad" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/aK6r24o9W_I/hqdefault.jpg" alt="ExperienciaIDEA 2023 IA ciencia ficción realidad" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">ExperienciaIDEA 2023 · IA: Ayer ciencia ficción, hoy realidad</p>
+          </article>
+
+          <article class="media-card" data-vid="WD63M7qxqeA" data-title="Seeds Table · Transformación Digital, Talento Tech y Big Data" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/WD63M7qxqeA/hqdefault.jpg" alt="Seeds Table Transformación Digital Talento Tech Big Data" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Seeds Table · Transformación Digital, Talento Tech y Big Data</p>
+          </article>
+
+          <article class="media-card" data-vid="1MvTKHn3DuA" data-title="El futuro de la Tecnología" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/1MvTKHn3DuA/hqdefault.jpg" alt="El futuro de la Tecnología" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">El futuro de la Tecnología</p>
+          </article>
+
+          <article class="media-card" data-vid="bnGcrQUMhDo" data-start="3121" data-title="Metaverso &amp; Web3 · CTO de Microsoft en UNComa" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/bnGcrQUMhDo/hqdefault.jpg" alt="Metaverso Web3 CTO Microsoft UNComa" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Metaverso &amp; Web3 · CTO de Microsoft en UNComa</p>
+          </article>
+
+          <article class="media-card" data-vid="ywY-znYO8W4" data-title="Kyndryl Summit · IT Modernization" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/ywY-znYO8W4/hqdefault.jpg" alt="Kyndryl Summit IT Modernization" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Kyndryl Summit · IT Modernization</p>
+          </article>
+
+          <article class="media-card" data-vid="yRPEeI5IJ2c" data-title="Aceleración Digital · The Good, The Bad &amp; The Ugly" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/yRPEeI5IJ2c/hqdefault.jpg" alt="Aceleración Digital the good the bad and the ugly" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Aceleración Digital · The Good, The Bad &amp; The Ugly</p>
+          </article>
+
+          <article class="media-card" data-vid="nHLCCEJ0nFU" data-start="2632" data-title="Gobierno Autónomo de La Paz · Ciudad en el Metaverso" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/nHLCCEJ0nFU/hqdefault.jpg" alt="Gobierno Autonomo La Paz ciudad en el metaverso" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Gobierno Autónomo de La Paz · Ciudad en el Metaverso</p>
+          </article>
+
+          <article class="media-card" data-vid="Q51HZmeDe_w" data-start="2969" data-title="ORT Alumni · Empresas en el Metaverso" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/Q51HZmeDe_w/hqdefault.jpg" alt="ORT Alumni Empresas en el Metaverso" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">ORT Alumni · Empresas en el Metaverso</p>
+          </article>
+
+          <article class="media-card" data-vid="-onQ4jtOCe8" data-title="Valencia College · Digital Transformation" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/-onQ4jtOCe8/hqdefault.jpg" alt="Valencia College Digital Transformation" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Valencia College · Digital Transformation</p>
+          </article>
+
+          <article class="media-card" data-vid="GNjQBSYsb00" data-title="After Office · Negocios Digitales en UdeSA" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/GNjQBSYsb00/hqdefault.jpg" alt="After Office Negocios Digitales UdeSA" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">After Office · Negocios Digitales en UdeSA</p>
+          </article>
+
+          <article class="media-card" data-vid="U8_srRQVdk0" data-title="Jurado · Premio a la Excelencia Agropecuaria" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/U8_srRQVdk0/hqdefault.jpg" alt="Jurado Premio Excelencia Agropecuaria" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Jurado · Premio a la Excelencia Agropecuaria</p>
+          </article>
+
+          <article class="media-card" data-vid="NK8Qp6ZAUgM" data-title="La Nación Smart Data · La tecnología y su poder para generar oportunidades de negocios" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/NK8Qp6ZAUgM/hqdefault.jpg" alt="La Nacion Smart Data event" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">La Nación Smart Data · La tecnología y su poder para generar oportunidades de negocios</p>
+          </article>
+
+          <article class="media-card" data-vid="pYlqXdMvf0Y" data-title="Microsoft Ignite 2021 · Innovate across Hybrid and Multicloud with Azure Arc" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/pYlqXdMvf0Y/hqdefault.jpg" alt="Microsoft Ignite 2021 Azure Arc session" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Microsoft Ignite 2021 · Innovate across Hybrid and Multicloud with Azure Arc</p>
+          </article>
+
+          <article class="media-card" data-vid="1fyg6qFDMIY" data-title="Microsoft Ignite 2021 · Arc On-Demand Session" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/1fyg6qFDMIY/hqdefault.jpg" alt="Microsoft Ignite 2021 Arc on-demand session" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Microsoft Ignite 2021 · Arc On-Demand Session</p>
+          </article>
+
+          <article class="media-card" data-vid="hyVTToYOIBM" data-title="Microsoft Ignite 2021 · Azure Arc OD327" data-start="1198" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/hyVTToYOIBM/hqdefault.jpg" alt="Microsoft Ignite 2021 Azure Arc OD327" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Microsoft Ignite 2021 · Azure Arc OD327</p>
+          </article>
+
+          <article class="media-card" data-vid="t6hsviug0Tg" data-title="Microsoft Ignite 2021 · Azure Arc FS176" data-start="1346" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/t6hsviug0Tg/hqdefault.jpg" alt="Microsoft Ignite 2021 Azure Arc FS176" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Microsoft Ignite 2021 · Azure Arc FS176</p>
+          </article>
+
+          <article class="media-card" data-vid="bFzRQYrV-dc" data-title="La Nación Smart Data · Capítulo 2" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/bFzRQYrV-dc/hqdefault.jpg" alt="La Nacion Smart Data capítulo 2" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">La Nación Smart Data · Capítulo 2</p>
+          </article>
+
+          <article class="media-card" data-vid="XLT4BcYfLjg" data-title="La Nación · Cápsula M30" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/XLT4BcYfLjg/hqdefault.jpg" alt="La Nacion Cápsula M30" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">La Nación · Cápsula M30</p>
+          </article>
+
+          <article class="media-card" data-vid="AEn2OY_-P8k" data-title="La Nación · Resumen Innovación" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/AEn2OY_-P8k/hqdefault.jpg" alt="La Nacion Resumen Innovación" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">La Nación · Resumen Innovación</p>
+          </article>
+
+          <article class="media-card" data-vid="i1ie3_cNWrA" data-title="El poder transformador de la innovación" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/i1ie3_cNWrA/hqdefault.jpg" alt="El poder transformador de la innovación" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">El poder transformador de la innovación</p>
+          </article>
+
+          <article class="media-card" data-vid="SWnhzcGPRMw" data-title="Tech Intensity Keynote" tabindex="0" role="button" aria-label="Play video">
+            <div class="media-card__thumb">
+              <img src="https://img.youtube.com/vi/SWnhzcGPRMw/hqdefault.jpg" alt="Tech Intensity Keynote" loading="lazy" />
+              <div class="media-card__play" aria-hidden="true">▶</div>
+            </div>
+            <p class="media-card__title">Tech Intensity Keynote</p>
+          </article>
+
+          </div><!-- /.film-grid -->
+          </div><!-- /.film-inner -->
+          <div class="film-sprocket film-sprocket--bottom"></div>
+        </div><!-- /.film-outer -->
+      </div>
+    </section>
+
+    <!-- PODCAST -->
+    <section class="section podcast-section" id="podcast" aria-labelledby="podcast-heading">
+      <div class="container">
+        <h2 class="section__title" id="podcast-heading"><span data-i18n="podcast_heading">Podcast</span></h2>
+        <p class="section__sub" data-i18n="podcast_sub">Episodes where I've been a guest or speaker.</p>
+        <div class="podcast-list">
+
+          <div class="podcast-item">
+            <iframe
+              src="https://open.spotify.com/embed/episode/4z0LhALFCOK3kiC8Ptwohk?utm_source=generator&theme=0"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" title="Spotify episode"></iframe>
+          </div>
+
+          <div class="podcast-item">
+            <iframe
+              src="https://open.spotify.com/embed/episode/0KU4mcByNNScezystDO1tE?utm_source=generator&theme=0"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" title="Spotify episode"></iframe>
+          </div>
+
+          <div class="podcast-item">
+            <iframe
+              src="https://open.spotify.com/embed/episode/6Es7ukEZpOkH0QDfFQ64me?utm_source=generator&theme=0"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" title="Spotify episode"></iframe>
+          </div>
+
+          <div class="podcast-item">
+            <iframe
+              src="https://open.spotify.com/embed/episode/0qCWHMMkAGBhVvO1wHC2FC?utm_source=generator&theme=0"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" title="Spotify episode"></iframe>
+          </div>
+
+          <div class="podcast-item">
+            <iframe
+              src="https://open.spotify.com/embed/episode/6RPpk7XOVcXy9m09doykhg?utm_source=generator&theme=0"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" title="Spotify episode"></iframe>
+          </div>
+
+          <div class="podcast-item">
+            <iframe
+              src="https://open.spotify.com/embed/episode/1bOz7nTlQBZUBlfwXBIcQ0?utm_source=generator&theme=0"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" title="Spotify episode"></iframe>
+          </div>
+
+          <div class="podcast-item">
+            <iframe
+              src="https://open.spotify.com/embed/episode/2fchLgJMnpDdxJ6rhkgYPQ?utm_source=generator&theme=0"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" title="Spotify episode"></iframe>
+          </div>
+
+          <div class="podcast-item">
+            <iframe
+              src="https://open.spotify.com/embed/episode/16jwYaEkkE9y5gqWDIAcvA?utm_source=generator&theme=0"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" title="Spotify episode"></iframe>
+          </div>
+
+          <div class="podcast-item">
+            <iframe
+              src="https://open.spotify.com/embed/episode/3YydWW1kx43FdV7EB2gedn?utm_source=generator&theme=0"
+              width="100%" height="152" frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy" title="Spotify episode"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO MODAL -->
+    <div id="video-modal" class="video-modal" aria-hidden="true" role="dialog" aria-label="Video player">
+      <div class="video-modal__backdrop"></div>
+      <div class="video-modal__inner">
+        <button class="video-modal__close" aria-label="Close video">✕</button>
+        <p class="video-modal__title" id="video-modal-title"></p>
+        <div class="video-modal__frame">
+          <iframe id="video-iframe" src="" frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen title="Video player"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="section__title" id="contact-heading"><span data-i18n="contact_heading">Let's Connect</span></h2>
+        <p class="section__subtitle" data-i18n="contact_subtitle">Find me across the web or book some time directly.</p>
+      </div>
+
+      <div class="coffee-cta">
+        <div class="coffee-card-frame">
+        <a href="https://aka.ms/MeetingWithDamian" target="_blank" rel="noopener" class="coffee-card">
+          <span class="coffee-icon">☕</span>
+          <div class="coffee-text">
+            <p class="coffee-text__title" data-i18n="coffee_title">Virtual Coffee with Damian</p>
+            <p class="coffee-text__sub" data-i18n="coffee_sub">Book a 1:1 &mdash; let&rsquo;s talk AI, data, cloud or anything in between.</p>
+          </div>
+          <span class="coffee-arrow">&rarr;</span>
+        </a>
+        </div>
+      </div>
+
+      <div class="social-section">
+        <p class="social-section__title" data-i18n="social_title">Find me on</p>
+        <div class="social-grid">
+
+          <a href="https://www.linkedin.com/in/Buonamico/" target="_blank" rel="noopener" class="social-card">
+            <svg class="social-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <div class="social-card__info">
+              <p class="social-card__name">LinkedIn</p>
+              <p class="social-card__handle">in/Buonamico</p>
+            </div>
+            <span class="social-card__arrow">&rarr;</span>
+          </a>
+
+          <a href="https://github.com/buonamico" target="_blank" rel="noopener" class="social-card">
+            <svg class="social-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <div class="social-card__info">
+              <p class="social-card__name">GitHub</p>
+              <p class="social-card__handle">@buonamico</p>
+            </div>
+            <span class="social-card__arrow">&rarr;</span>
+          </a>
+
+          <a href="https://twitter.com/Acatincho" target="_blank" rel="noopener" class="social-card">
+            <svg class="social-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            <div class="social-card__info">
+              <p class="social-card__name">Twitter / X</p>
+              <p class="social-card__handle">@Acatincho</p>
+            </div>
+            <span class="social-card__arrow">&rarr;</span>
+          </a>
+
+          <a href="https://www.instagram.com/tincho.Buonamico/" target="_blank" rel="noopener" class="social-card">
+            <svg class="social-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+            <div class="social-card__info">
+              <p class="social-card__name">Instagram</p>
+              <p class="social-card__handle">@tincho.Buonamico</p>
+            </div>
+            <span class="social-card__arrow">&rarr;</span>
+          </a>
+
+          <a href="https://www.youtube.com/@Damian.Buonamico" target="_blank" rel="noopener" class="social-card">
+            <svg class="social-card__icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            <div class="social-card__info">
+              <p class="social-card__name">YouTube</p>
+              <p class="social-card__handle">@Damian.Buonamico</p>
+            </div>
+            <span class="social-card__arrow">&rarr;</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="year"></span> <span id="footer-name">Damián Buonamico</span> <a href="#" id="footer-terminal-trigger" class="footer__terminal-link" title="Open terminal (Ctrl+M)">&#934;</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=25"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>
