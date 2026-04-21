@@ -514,7 +514,7 @@ function runBoot() {
     const div = document.createElement('div')
     div.className = 'boot-line boot-line--bar'
     linesEl.appendChild(div)
-    const BLOCKS = 16
+    const BLOCKS = 30
     let filled = 0
     const tick = () => {
       const filledStr = filled > 0
@@ -524,7 +524,7 @@ function runBoot() {
         ? `<span style="color:${color}26">${'░'.repeat(BLOCKS - filled)}</span>`
         : ''
       const pct = String(Math.round((filled / BLOCKS) * 100)).padStart(3)
-      div.innerHTML = `  <span style="color:${color}99">▸</span> <span style="color:#fff;display:inline-block;width:11ch">${label}</span><span style="color:#fff">[</span>${filledStr}${emptyStr}<span style="color:#fff">]</span>${pct}%`
+      div.innerHTML = `  <span style="color:${color}99">▸</span> <span style="color:#fff;display:inline-block;width:30ch">${label}</span><span style="color:#fff">[</span>${filledStr}${emptyStr}<span style="color:#fff">]</span>${pct}%`
       if (filled < BLOCKS) { filled++; setTimeout(tick, 28 + Math.random() * 38) }
       else onDone?.()
     }

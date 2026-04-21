@@ -1,4 +1,4 @@
-const CACHE = 'db-site-v1';
+const CACHE = 'db-site-v2';
 const ASSETS = [
   '/',
   '/index.html',
