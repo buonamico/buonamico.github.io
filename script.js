@@ -462,7 +462,7 @@ function runBoot() {
   const LOGO = [
     '████████████████████████████████████████████████████████',
     '                                                        ',
-    '   M A R T I N   S C I A R R I L L O                  ',
+    '  D A M I A N  B U O N A M I C O                        ',
     '                                                        ',
     '████████████████████████████████████████████████████████',
   ]
@@ -474,11 +474,11 @@ function runBoot() {
   })
 
   const MODULES = [
-    ['CLOUD',      '#4ecdc4'],
-    ['AI',         '#4ecdc4'],
-    ['STRATEGY',   '#4ecdc4'],
-    ['MANAGEMENT', '#4ecdc4'],
-    ['FOODIE',     '#4ecdc4'],
+    ['Systems Thinking',      '#4ecdc4'],
+    ['Organizational Design',         '#4ecdc4'],
+    ['Transformation',   '#4ecdc4'],
+    ['Leadership Development', '#4ecdc4'],
+    ['AI-Enabled Ways of Working',     '#4ecdc4'],
   ]
 
   const FOOTER = [
@@ -543,7 +543,7 @@ function runBoot() {
 
   function showBars(done) {
     addLine('')
-    const stackHeader = addLine('  ── COMPETENCY STACK ─────────────────', 'boot-line--sys')
+    const stackHeader = addLine('  ── COMPETENCIES ─────────────────', 'boot-line--sys')
     stackHeader.style.marginBottom = '1.8rem'
     let completed = 0
     MODULES.forEach(([mod, color], idx) => {
@@ -672,10 +672,10 @@ const termInput = document.getElementById('term-input')
 
 const termCmds = {
   help:    () => ['available commands:', '  whoami   · who is this?', '  ls       · list sections', '  skills   · tech stack', '  contact  · book a coffee', '  noise    · toggle CRT noise overlay', '  trail    · toggle neon cursor trail', '  matrix   · toggle matrix rain effect', '  clear    · clear screen', '  exit     · close terminal'],
-  whoami:  () => ['Damián Buonamico', 'Executive Technology Strategist · Microsoft Argentina', 'AI · Data · Cloud'],
+  whoami:  () => ['Damián Buonamico', 'Systems Engineer | Enterprise Transformation Leader'],
   ls:      () => ['drwxr-xr-x  about/', 'drwxr-xr-x  speaking/', 'drwxr-xr-x  news/', 'drwxr-xr-x  contact/'],
-  skills:  () => ['AI/ML · Azure · AWS · GCP', 'Data Strategy · Cloud Architecture', 'Executive Advisory · Product Leadership', 'Linux · Unix · Hybrid Cloud'],
-  contact: () => { setTimeout(() => window.open('https://aka.ms/MeetingWithDamian', '_blank'), 400); return ['opening → https://aka.ms/MeetingWithDamian'] },
+  skills:  () => ['Product & Engineering Systems Transformation', 'Systems Thinking & Organizational Design', 'Product Leadership', 'AI-Enabled Ways of Working'],
+  contact: () => { setTimeout(() => window.open('https://www.linkedin.com/in/buonamico', '_blank'), 400); return ['opening → https://www.linkedin.com/in/buonamico'] },
   clear:   () => { termOut.innerHTML = ''; return [] },
   exit:    () => { setTimeout(() => term.classList.remove('is-open'), 150); return ['closing terminal...'] },
   // hidden
@@ -981,7 +981,7 @@ document.addEventListener('keydown', e => {
     term.classList.toggle('is-open')
     if (term.classList.contains('is-open')) {
       termInput.focus()
-      if (!termOut.children.length) termWrite(['Acatincho OS v2.6.0~', 'type "help" for available commands', '─'.repeat(40)])
+      if (!termOut.children.length) termWrite(['~', 'type "help" for available commands', '─'.repeat(40)])
     }
   }
 })
@@ -999,42 +999,29 @@ function initLang() {
   const es = {
     nav_about: 'Sobre mí',
     nav_speaking: 'Charlas',
-    nav_news: 'En los medios',
-    nav_media: 'En cámara',
+    nav_news: '...',
+    nav_media: '...',
     nav_contact: 'Contacto',
     about_heading: 'Sobre mí',
-    speaking_heading: 'Charlas & Eventos',
-    speaking_subtitle: 'Apariciones seleccionadas en conferencias, cumbres y eventos mediáticos.',
-    news_heading: 'En los medios',
-    news_subtitle: 'Cobertura de prensa y apariciones en medios a lo largo de los años.',
+    speaking_heading: 'C...',
+    speaking_subtitle: '....',
+    news_heading: '...',
+    news_subtitle: '....',
     media_heading: 'En cámara',
     media_sub: 'Entrevistas · Podcasts · Charlas',
     podcast_heading: 'Podcast',
-    podcast_sub: 'Episodios donde fui invitado o speaker.',
+    podcast_sub: '...',
     contact_heading: 'Conectemos',
-    contact_subtitle: 'Encontrame en la web o agendá una reunión directamente.',
+    contact_subtitle: 'Encontrame en la web',
     coffee_title: 'Café virtual con Damián',
-    coffee_sub: 'Agendá un 1:1 — hablemos de IA, datos, cloud o lo que sea.',
+    coffee_sub: 'Agendá un 1:1',
     social_title: 'Encontrame en',
-    about_bio: `<p>Construyo cosas con tecnología desde que tengo memoria.</p>
-<p>Mi primer encuentro con una computadora fue en mi escuela pública a principios de los 90, frente a una <strong>Commodore 64</strong>. Ahí descubrí <strong>LOGO</strong> — y ahí nació mi primer "amor" digital: una tortuga que se movía por la pantalla dibujando formas, un comando a la vez.</p>
-<p>Un año después tuve mi primera PC en casa — tenía 10 años. El lugar donde mi papá la compró también me enseñó <strong>MS BASIC</strong>. En ese momento no lo sabía, pero eso era <strong>programación</strong> — en una época en que las computadoras casi no tenían abstracción y había que escribir código para hacer cualquier cosa.</p>
-<p>Cuando empecé el secundario, descubrí el <strong>internet</strong> — y de repente el mundo no tenía fronteras. Email, IRC, gente conectándose desde todos lados… parecía <strong>magia</strong>. Pasé gran parte de mi adolescencia experimentando y construyendo con <strong>HTML</strong>, <strong>CSS</strong>, y <strong>JavaScript</strong>, y eventualmente convertí esa curiosidad en ingresos en los primeros años de la web.</p>
-<p>Después empezó el capítulo corporativo. Me fui sumando a empresas cada vez más grandes y, desde el primer día, me incliné por el <strong>global delivery</strong> — mucho antes de que se volviera lo habitual.</p>
-<p>Vi evolucionar el stack: desde redes <strong>Novell</strong> hasta <strong>Windows</strong>, <strong>Unix</strong> y <strong>Linux</strong> en <strong>datacenters on-premise</strong> tradicionales, hasta mover cargas de trabajo a la nube. De deployments clásicos a infraestructura como código.</p>
-<p>Y ahora estamos entrando en la <strong>era de la IA</strong> — donde la infraestructura no solo ejecuta sistemas, sino que <strong>potencia inteligencia</strong>.</p>
-<p>Operé en la intersección entre construir soluciones y operarlas — mientras construía equipos que hacen ambas cosas, en distintos países, regiones y zonas horarias.</p>
-<p>Tuve el privilegio de trabajar dentro de algunas de las <strong>empresas tecnológicas más grandes del mundo</strong>, colaborando con organizaciones globales en distintas industrias y mercados. Esa exposición moldeó mi visión de la tecnología: no como teoría, sino como algo que se comporta diferente según el contexto, la <strong>cultura</strong>, los incentivos y la ejecución.</p>
-<p>Actualmente soy <strong>Executive Technology Strategist</strong> en <span class="hl-grad">Microsoft</span>, trabajando con líderes senior de negocio para traducir datos, IA, nube y seguridad en resultados medibles. Anteriormente, lideré la organización de <strong>Customer Success Data &amp; AI</strong> en <strong>Spanish South America (SSA)</strong> — Argentina, Chile, Bolivia, Colombia, Ecuador, Paraguay, Perú y Uruguay — y fui <strong>CTO</strong> y miembro del <strong>Leadership Team</strong> de la subsidiaria en <span class="hl-grad">Argentina</span>, siempre enfocado en alinear la estrategia tecnológica con el impacto en el negocio.</p>
-<p>Antes de Microsoft, fui <strong>Global Leader of Multicloud Platforms</strong> en <span class="hl-grad">EY</span>, construyendo productos y servicios en entornos híbridos y cloud en EE.UU., Europa y Asia. Antes de eso, lideré el <strong>Global Unix &amp; Linux team</strong> de la firma.</p>
-<p>Y antes de eso, armé y escalé equipos tecnológicos en <span class="hl-grad">IBM</span> durante la expansión del Global Delivery Center, dando soporte a clientes en EE.UU. — siempre desde <span class="hl-grad">Argentina</span> al mundo.</p>
-<p>Soy Licenciado en Análisis de Sistemas por <strong>ORT Argentina</strong>, complementado con programas ejecutivos en la <strong>Universidad Torcuato Di Tella</strong> &amp; <strong>Universidad de San Andrés</strong>, donde también fui asesor de tesis del Máster en Negocios Digitales. Además, actualmente soy <strong>board member</strong>, <strong>asesor técnico</strong> y <strong>fractional CTO</strong> de varias startups.</p>
-<p>Soy un <strong>defensor de la IA</strong> — no desde el hype, sino con convicción. Creo que la IA es una fuerza transformadora que va a redefinir fundamentalmente la manera en que trabajamos, decidimos y construimos. Por eso hablo frecuentemente sobre su impacto en los negocios y en la sociedad, participando en eventos y medios tanto en Argentina como a nivel internacional — incluyendo Forbes, La Nación, Clarín, Ámbito Financiero, Apertura, Information Technology, IDEA Management, Nerdearla, Campus Party, entre otros.</p>
-<p>Fuera de la oficina, tengo la suerte de estar casado con <strong>Vicky</strong> y de ser el papá de <strong>Miranda</strong> 🧡</p>
-<p>Somos <strong>foodies</strong> por naturaleza y <strong>viajeros</strong> por elección. Nos encanta recibir gente en casa y hacer asados, y adoramos descubrir lugares y sabores nuevos. Cuando viajamos somos tercos en una sola cosa: seguir siendo viajeros, nunca turistas. Así es como nos mantenemos curiosos. No solo visitamos lugares — los probamos. La <strong>cultura</strong> puede ser sutil, multicapa, difícil de descifrar. Pero ponés gente alrededor de una mesa y se vuelve real rápido — platos compartidos, mercados locales, conversaciones de verdad, acá o del otro lado del mundo.</p>
-<p>Como dijo <strong>Anthony Bourdain</strong>, la comida es una de las formas más honestas de entender a las personas.</p>
-<p>Esa misma mentalidad se mete en el resto de mi vida. Soy <strong>corredor</strong> habitual — sin maratón completo todavía, pero llegando de a sprints. Juego al <strong>fútbol</strong> a un nivel muy amateur (mucho entusiasmo, poco talento). Soy un nerd del <strong>café</strong>. Y soy un devoto irredento de un <strong>Negroni</strong> bien preparado — sin atajos, nunca.</p>
-<p>Porque ya sea en tecnología, viajes, deporte, café o cócteles, me atraen las cosas que recompensan la paciencia, el oficio y la consistencia.</p>`,
+    about_bio: `<p><strong>25+ años en IT</strong>, desde el desarrollo de software hasta el liderazgo de evolución organizacional. <strong>15+ años</strong> impulsando transformaciones en startups, empresas y entornos de consultoría.</p>
+<p>Lidero la evolución de cómo las organizaciones construyen y entregan productos en entornos cada vez más complejos, distribuidos y en constante cambio.</p>
+<p>Mi trabajo se desarrolla en la intersección entre <strong>liderazgo ágil</strong>, <strong>pensamiento sistémico</strong> y <strong>nuevas formas de trabajo potenciadas por IA</strong>, donde el desafío ya no es adoptar frameworks, sino diseñar sistemas que puedan adaptarse, escalar y mejorar de forma continua.</p>
+<p>Comencé mi carrera como <strong>Ingeniero en Sistemas</strong>, desarrollando software desde cero, y evolucioné hacia el liderazgo de transformaciones a gran escala en startups, empresas y entornos de consultoría en Latinoamérica y a nivel global.</p>
+<p>Ayudo a dar forma a la evolución de <strong>modelos híbridos de ejecución entre producto y proyectos</strong>, trabajando junto a líderes y equipos para mejorar cómo fluye el trabajo en ecosistemas complejos de Producto, Ingeniería, IT y PMO.</p>
+<p>Mi foco está en habilitar a las organizaciones para evolucionar desde una ejecución basada en procesos hacia <strong>sistemas adaptativos, orientados a resultados y escalables</strong>, capaces de prosperar en contextos de incertidumbre, cambio tecnológico acelerado y la necesidad de tomar decisiones más rápidas y mejor informadas.</p>`,
   }
 
   function applyLang(lang) {

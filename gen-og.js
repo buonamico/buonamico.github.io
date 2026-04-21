@@ -53,7 +53,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
 
   <!-- MS_ logo — top left -->
   <text x="80" y="108" font-family="'Courier New',Courier,monospace" font-size="26" font-weight="bold"
-        fill="#00e5ff" filter="url(#glow-sm)">MS_</text>
+        fill="#00e5ff" filter="url(#glow-sm)">DB_</text>
 
   <!-- URL — top right -->
   <text x="${W - 78}" y="108" font-family="'Courier New',Courier,monospace" font-size="15"
@@ -61,15 +61,15 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
 
   <!-- Name glow layer -->
   <text x="80" y="320" font-family="Arial,Helvetica,sans-serif" font-size="104" font-weight="bold"
-        fill="#00e5ff" opacity="0.12" filter="url(#glow-lg)">Mart&#237;n Buonamico</text>
+        fill="#00e5ff" opacity="0.12" filter="url(#glow-lg)">Damian Buonamico</text>
 
   <!-- Name main -->
   <text x="80" y="320" font-family="Arial,Helvetica,sans-serif" font-size="104" font-weight="bold"
-        fill="white">Mart&#237;n Buonamico</text>
+        fill="white">Damian Buonamico</text>
 
   <!-- Roles -->
   <text x="82" y="372" font-family="'Courier New',Courier,monospace" font-size="19"
-        fill="#00e5ff" letter-spacing="2" filter="url(#glow-sm)">CTO  &#xB7;  TECH EXECUTIVE  &#xB7;  ADVISOR  &#xB7;  SPEAKER</text>
+        fill="#00e5ff" letter-spacing="2" filter="url(#glow-sm)">SYSTEM ENGINEER  &#xB7;  TRANSFORMATION LEADER</text>
 
   <!-- Divider -->
   <line x1="80" y1="398" x2="700" y2="398" stroke="#00e5ff" stroke-width="1" opacity="0.2"/>
@@ -79,11 +79,11 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
 
   <!-- Tagline text -->
   <text x="100" y="449" font-family="'Courier New',Courier,monospace" font-size="21"
-        fill="rgba(255,255,255,0.6)">Turning AI, data &amp; cloud into real outcomes</text>
+        fill="rgba(255,255,255,0.6)">I help product, engineering, and enterprise organizations evolve how they operate in complex environments</text>
 
   <!-- Bottom label -->
   <text x="${W / 2}" y="${H - 48}" font-family="'Courier New',Courier,monospace" font-size="13"
-        fill="#00e5ff" text-anchor="middle" opacity="0.35">// TECH PORTFOLIO</text>
+        fill="#00e5ff" text-anchor="middle" opacity="0.35">// PERSONAL PAGE</text>
 </svg>`
 
 sharp(Buffer.from(svg, 'utf8'))
