@@ -601,12 +601,12 @@ const term = document.createElement('div')
 term.id = 'terminal'
 term.innerHTML = `
   <div class="term-header">
-    <span class="term-title">// Acatincho OS v2.6.0~</span>
+    <span class="term-title">// ~</span>
     <button class="term-close" aria-label="Close terminal">✕</button>
   </div>
   <div class="term-output" id="term-output"></div>
   <div class="term-input-row">
-    <span class="term-prompt">root@tincho:~$&nbsp;</span>
+    <span class="term-prompt">root@damian:~$&nbsp;</span>
     <input class="term-input" id="term-input" type="text" autocomplete="off" spellcheck="false" />
   </div>
 `
@@ -699,7 +699,7 @@ termInput.addEventListener('keydown', e => {
   const cmd = termInput.value.trim().toLowerCase()
   termInput.value = ''
   if (!cmd) return
-  termWrite([`root@tincho:~$ ${cmd}`], 'term-cmd')
+  termWrite([`root@damian:~$ ${cmd}`], 'term-cmd')
   const fn = termCmds[cmd]
   if (fn) { const out = fn(); if (out.length) termWrite(out) }
   else termWrite([`command not found: ${cmd}`, 'type "help" for available commands'])
@@ -1007,8 +1007,8 @@ function initLang() {
     speaking_subtitle: '....',
     news_heading: '...',
     news_subtitle: '....',
-    media_heading: 'En cámara',
-    media_sub: 'Entrevistas · Podcasts · Charlas',
+    media_heading: '',
+    media_sub: '',
     podcast_heading: 'Podcast',
     podcast_sub: '...',
     contact_heading: 'Conectemos',
