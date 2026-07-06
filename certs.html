@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Damian Buonamico — Certifications and Professional Credentials." />
+  <meta property="og:title" content="Certifications · Damián Buonamico" />
+  <meta property="og:description" content="Professional certifications and credentials." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://buonamico.github.io/certs" />
+  <meta name="theme-color" content="#00e5ff" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <title>Certifications · Damián Buonamico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* CERTS PAGE SPECIFIC STYLES */
+    .certs-hero {
+      min-height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(0,229,255,0.2);
+      padding-block: 3rem;
+    }
+
+    .certs-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,229,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 50%, black 40%, transparent 80%);
+      pointer-events: none;
+    }
+
+    .certs-hero__content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .certs-hero__title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      margin-bottom: 0.875rem;
+      background: linear-gradient(105deg, #ffffff 0%, #00e5ff 48%, #ff00de 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: glitch 4s infinite;
+    }
+
+    .certs-hero__subtitle {
+      color: var(--color-text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      line-height: 1.7;
+      max-width: 58ch;
+      margin: 0 auto;
+    }
+
+    /* CERTS GRID */
+    .certs-section {
+      position: relative;
+      z-index: 1;
+    }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .cert-card {
+      position: relative;
+      group;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.2,0,0,1.3);
+    }
+
+    .cert-card:hover {
+      transform: scale(1.05);
+      z-index: 10;
+    }
+
+    .cert-thumbnail {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 8.5/11;
+      background: linear-gradient(135deg, #1c1c2e 0%, #0e0e1c 100%);
+      border: 1px solid rgba(0,229,255,0.3);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 0 30px rgba(0,229,255,0.1), 0 20px 60px rgba(0,0,0,0.6);
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cert-card:hover .cert-thumbnail {
+      box-shadow: 0 0 50px rgba(0,229,255,0.3), 0 30px 80px rgba(0,0,0,0.8);
+      border-color: var(--color-cyan);
+    }
+
+    .cert-preview {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .cert-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(2px);
+      z-index: 2;
+    }
+
+    .cert-card:hover .cert-overlay {
+      opacity: 1;
+    }
+
+    .cert-overlay__icon {
+      font-size: 2.5rem;
+      color: var(--color-cyan);
+      text-shadow: var(--glow-cyan);
+      filter: drop-shadow(0 0 10px rgba(0,229,255,0.5));
+    }
+
+    .cert-title {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-top: 0.875rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      word-break: break-word;
+      transition: color 0.3s ease;
+    }
+
+    .cert-card:hover .cert-title {
+      color: var(--color-cyan);
+      text-shadow: var(--glow-cyan);
+    }
+
+    .certs-empty {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      color: var(--color-text-muted);
+      font-family: var(--font-mono);
+    }
+
+    .certs-empty__icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .certs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .certs-hero {
+        min-height: 30vh;
+        padding-block: 2rem;
+      }
+
+      .certs-hero__title {
+        font-size: clamp(1.5rem, 4vw, 2.25rem);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .certs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+
+      .cert-card {
+        transition: transform 0.2s ease;
+      }
+
+      .cert-card:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 8, 8, 0.98);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(4px);
+      animation: fadeUp 0.3s ease;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox__content {
+      position: relative;
+      width: 90%;
+      height: 90%;
+      max-width: 900px;
+    }
+
+    .lightbox__iframe {
+      width: 100%;
+      height: 100%;
+      border: 1px solid rgba(0,229,255,0.3);
+      border-radius: 4px;
+    }
+
+    .lightbox__close {
+      position: absolute;
+      top: -2.5rem;
+      right: 0;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--color-cyan);
+      cursor: pointer;
+      transition: color 0.2s ease, text-shadow 0.2s ease;
+      text-shadow: var(--glow-cyan);
+      z-index: 1;
+    }
+
+    .lightbox__close:hover {
+      color: #fff;
+    }
+
+    .lightbox__close::before {
+      content: '×';
+    }
+  </style>
+  <script>if(!sessionStorage.getItem('booted'))document.documentElement.classList.add('is-booting')</script>
+</head>
+<body>
+  <div id="read-progress" aria-hidden="true"></div>
+  <div id="boot-screen" aria-hidden="true"><div id="boot-lines"></div></div>
+
+  <!-- NAV -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="nav__logo" href="/">DB</a>
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#book">Book</a></li>
+        <li><a href="/certs.html" class="is-active">Certifications</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language / Idioma">
+        <button class="lang-toggle__btn active" data-lang="en">EN</button>
+        <span class="lang-toggle__sep" aria-hidden="true">·</span>
+        <button class="lang-toggle__btn" data-lang="es">ES</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="certs-hero" id="certs-hero" aria-labelledby="certs-title">
+      <div class="certs-hero__content">
+        <h1 class="certs-hero__title" id="certs-title">Certifications</h1>
+        <p class="certs-hero__subtitle">Professional credentials and certifications in agile coaching, systems engineering, and organizational leadership.</p>
+      </div>
+    </section>
+
+    <!-- CERTS GRID -->
+    <section class="section certs-section" aria-labelledby="certs-grid-title">
+      <div class="container">
+        <div id="certs-grid" class="certs-grid" role="grid" aria-label="Certificate list"></div>
+        <div id="certs-empty" class="certs-empty" style="display: none;">
+          <div class="certs-empty__icon">📄</div>
+          <p>No certificates found. Check back soon!</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">&copy; <span id="year"></span> <span id="footer-name">Damián Buonamico</span></p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+    <div class="lightbox__content">
+      <button class="lightbox__close" aria-label="Close certificate viewer"></button>
+      <iframe id="lightbox-iframe" class="lightbox__iframe" title="Certificate document"></iframe>
+    </div>
+  </div>
+
+  <script src="script.js?v=26"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Load certificates from /certs folder
+    async function loadCertificates() {
+      try {
+        const response = await fetch('/certs/');
+        const html = await response.text();
+        
+        // Parse HTML to find PDF links
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const links = Array.from(doc.querySelectorAll('a'))
+          .filter(a => a.href.endsWith('.pdf'))
+          .map(a => ({
+            url: a.href,
+            name: a.textContent.trim()
+          }));
+
+        if (links.length === 0) {
+          document.getElementById('certs-empty').style.display = 'block';
+          return;
+        }
+
+        const grid = document.getElementById('certs-grid');
+        grid.innerHTML = '';
+
+        for (const cert of links) {
+          const card = createCertCard(cert.url, cert.name);
+          grid.appendChild(card);
+        }
+      } catch (error) {
+        console.error('Error loading certificates:', error);
+        document.getElementById('certs-empty').style.display = 'block';
+      }
+    }
+
+    function createCertCard(pdfUrl, fileName) {
+      const card = document.createElement('div');
+      card.className = 'cert-card';
+      
+      const cleanName = fileName
+        .replace(/\.pdf$/i, '')
+        .replace(/[_-]/g, ' ')
+        .replace(/(\b\w)/g, char => char.toUpperCase());
+
+      card.innerHTML = `
+        <div class="cert-thumbnail">
+          <img src="${pdfUrl}#page=1" alt="${cleanName}" class="cert-preview" loading="lazy">
+          <div class="cert-overlay">
+            <div class="cert-overlay__icon">📖</div>
+          </div>
+        </div>
+        <p class="cert-title">${cleanName}</p>
+      `;
+
+      card.addEventListener('click', () => openLightbox(pdfUrl));
+      return card;
+    }
+
+    function openLightbox(pdfUrl) {
+      const lightbox = document.getElementById('lightbox');
+      const iframe = document.getElementById('lightbox-iframe');
+      iframe.src = pdfUrl;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      const iframe = document.getElementById('lightbox-iframe');
+      lightbox.classList.remove('active');
+      iframe.src = '';
+      document.body.style.overflow = '';
+    }
+
+    // Lightbox close button
+    document.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
+
+    // Close lightbox on background click
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+      if (e.target.id === 'lightbox') {
+        closeLightbox();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+
+    // Load certs on page load
+    loadCertificates();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+    }
+  </script>
+</body>
+</html>
