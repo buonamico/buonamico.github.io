@@ -72,120 +72,88 @@
       margin: 0 auto;
     }
 
-    /* CERTS GRID */
+    /* CERTS SECTION */
     .certs-section {
       position: relative;
       z-index: 1;
     }
 
-    .certs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 2rem;
+    .certs-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
       margin-top: 2rem;
     }
 
-    .cert-card {
-      position: relative;
-      group;
-      cursor: pointer;
-      transition: transform 0.3s cubic-bezier(0.2,0,0,1.3);
-    }
-
-    .cert-card:hover {
-      transform: scale(1.05);
-      z-index: 10;
-    }
-
-    .cert-thumbnail {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 8.5/11;
-      background: linear-gradient(135deg, #1c1c2e 0%, #0e0e1c 100%);
-      border: 1px solid rgba(0,229,255,0.3);
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 0 30px rgba(0,229,255,0.1), 0 20px 60px rgba(0,0,0,0.6);
-      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    .cert-item {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border: 1px solid rgba(0,229,255,0.2);
+      background: var(--color-bg);
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+      transition: all var(--transition);
+      text-decoration: none;
+      color: var(--color-text);
+      gap: 1rem;
     }
 
-    .cert-card:hover .cert-thumbnail {
-      box-shadow: 0 0 50px rgba(0,229,255,0.3), 0 30px 80px rgba(0,0,0,0.8);
+    .cert-item:hover {
+      background: rgba(0,229,255,0.05);
       border-color: var(--color-cyan);
+      box-shadow: 0 0 30px rgba(0,229,255,0.1);
+      transform: translateX(4px);
     }
 
-    .cert-preview {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .cert-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      backdrop-filter: blur(2px);
-      z-index: 2;
-    }
-
-    .cert-card:hover .cert-overlay {
-      opacity: 1;
-    }
-
-    .cert-overlay__icon {
-      font-size: 2.5rem;
+    .cert-item__icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
       color: var(--color-cyan);
       text-shadow: var(--glow-cyan);
-      filter: drop-shadow(0 0 10px rgba(0,229,255,0.5));
     }
 
-    .cert-title {
+    .cert-item__info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .cert-item__name {
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 0.25rem;
+      word-break: break-word;
+      transition: color var(--transition);
+    }
+
+    .cert-item:hover .cert-item__name {
+      color: var(--color-cyan);
+      text-shadow: var(--glow-cyan);
+    }
+
+    .cert-item__type {
+      font-size: 0.75rem;
       color: var(--color-text-muted);
-      margin-top: 0.875rem;
-      text-align: center;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      line-height: 1.4;
-      word-break: break-word;
-      transition: color 0.3s ease;
     }
 
-    .cert-card:hover .cert-title {
+    .cert-item__arrow {
+      flex-shrink: 0;
+      color: var(--color-magenta);
+      font-size: 1.25rem;
+      transition: transform var(--transition), color var(--transition);
+    }
+
+    .cert-item:hover .cert-item__arrow {
+      transform: translateX(4px);
       color: var(--color-cyan);
-      text-shadow: var(--glow-cyan);
-    }
-
-    .certs-empty {
-      text-align: center;
-      padding: 3rem 1.5rem;
-      color: var(--color-text-muted);
-      font-family: var(--font-mono);
-    }
-
-    .certs-empty__icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      opacity: 0.5;
     }
 
     /* RESPONSIVE */
     @media (max-width: 768px) {
-      .certs-grid {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 1.5rem;
-      }
-
       .certs-hero {
         min-height: 30vh;
         padding-block: 2rem;
@@ -194,20 +162,29 @@
       .certs-hero__title {
         font-size: clamp(1.5rem, 4vw, 2.25rem);
       }
+
+      .cert-item {
+        padding: 0.875rem 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .cert-item:hover {
+        transform: none;
+      }
+
+      .cert-item__arrow {
+        display: none;
+      }
     }
 
     @media (max-width: 480px) {
-      .certs-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+      .cert-item__name {
+        font-size: 0.85rem;
       }
 
-      .cert-card {
-        transition: transform 0.2s ease;
-      }
-
-      .cert-card:hover {
-        transform: scale(1.03);
+      .cert-item__icon {
+        font-size: 1.25rem;
       }
     }
 
@@ -300,13 +277,195 @@
       </div>
     </section>
 
-    <!-- CERTS GRID -->
-    <section class="section certs-section" aria-labelledby="certs-grid-title">
+    <!-- CERTS LIST -->
+    <section class="section certs-section">
       <div class="container">
-        <div id="certs-grid" class="certs-grid" role="grid" aria-label="Certificate list"></div>
-        <div id="certs-empty" class="certs-empty" style="display: none;">
-          <div class="certs-empty__icon">📄</div>
-          <p>No certificates found. Check back soon!</p>
+        <div class="certs-list" role="list">
+          <!-- SCRUM ALLIANCE CERTIFICATIONS -->
+          <a href="/certs/Damián%20Buonamico-ScrumAlliance_CSM_Certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Certified Scrum Master (CSM)</div>
+              <div class="cert-item__type">Scrum Alliance</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/Damián%20Buonamico-ScrumAlliance_CSPO_Certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Certified Scrum Product Owner (CSPO)</div>
+              <div class="cert-item__type">Scrum Alliance</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/Damián%20Buonamico-ScrumAlliance_CSD_Certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Certified Scrum Developer (CSD)</div>
+              <div class="cert-item__type">Scrum Alliance</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/Damián%20Buonamico-ScrumAlliance_CSP_Certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Certified Scrum Professional (CSP)</div>
+              <div class="cert-item__type">Scrum Alliance</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <!-- AGILE & COACHING CERTIFICATIONS -->
+          <a href="/certs/201806%20Agile%20Team%20Coach.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Agile Team Coach</div>
+              <div class="cert-item__type">Professional Certification</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/2017%20Coaching%20Organizacional.jpg" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Coaching Organizacional</div>
+              <div class="cert-item__type">Professional Development</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/2017-12-17%20Coach%20Ontológico.jpg" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Coach Ontológico</div>
+              <div class="cert-item__type">Professional Development</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <!-- FRAMEWORK CERTIFICATIONS -->
+          <a href="/certs/2017%20Buonamico_SAFE.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">SAFe (Scaled Agile Framework)</div>
+              <div class="cert-item__type">Framework Certification</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/2019-12-LeSS-certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">LeSS (Large Scale Scrum)</div>
+              <div class="cert-item__type">Framework Certification</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/2024-LeSS-CLP%20Buonamico.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Certified LeSS Practitioner (CLP)</div>
+              <div class="cert-item__type">Framework Certification • 2024</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/2023-EnterpriseAgilityPractitioner.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Enterprise Agility Practitioner</div>
+              <div class="cert-item__type">Framework Certification • 2023</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <!-- SPECIALIZED CERTIFICATIONS -->
+          <a href="/certs/2020-PNL.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">PNL (Neuro Linguistic Programming)</div>
+              <div class="cert-item__type">Specialized Training • 2020</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/Kleer%20-%20ATF%20-%202017.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Kleer - ATF (Agile Transformation Framework)</div>
+              <div class="cert-item__type">Specialized Training • 2017</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/Kleer%20-%20Certificado%20Examen%20-%20Damián%20Buonamico.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🎓</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Kleer Certification Exam</div>
+              <div class="cert-item__type">Specialized Training</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <!-- AI & TECHNOLOGY CERTIFICATIONS -->
+          <a href="/certs/AI%20Certificate_Damian%20Buonamico_AI%20Builder.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🤖</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">AI Builder</div>
+              <div class="cert-item__type">AI & Technology</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/AI%20Certificate_Damian%20Buonamico_AI%20Mastery.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🤖</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">AI Mastery</div>
+              <div class="cert-item__type">AI & Technology</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/Certificados_Fund._IA_Buonamico.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🤖</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Fundamentals of AI</div>
+              <div class="cert-item__type">AI & Technology</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/CertificateOfCompletion_Python%20Essential%20Training.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">💻</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Python Essential Training</div>
+              <div class="cert-item__type">Programming Skills</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <!-- LANGUAGE & OTHER -->
+          <a href="/certs/English%20Level%20%202024-02-08%20at%2013.48.45.png" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">🌐</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">English Level Certification</div>
+              <div class="cert-item__type">Language Skills • 2024</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
+
+          <a href="/certs/certificate_of_attendance.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+            <div class="cert-item__icon">📜</div>
+            <div class="cert-item__info">
+              <div class="cert-item__name">Certificate of Attendance</div>
+              <div class="cert-item__type">Professional Development</div>
+            </div>
+            <div class="cert-item__arrow">→</div>
+          </a>
         </div>
       </div>
     </section>
@@ -319,111 +478,10 @@
     </div>
   </footer>
 
-  <!-- LIGHTBOX -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer">
-    <div class="lightbox__content">
-      <button class="lightbox__close" aria-label="Close certificate viewer"></button>
-      <iframe id="lightbox-iframe" class="lightbox__iframe" title="Certificate document"></iframe>
-    </div>
-  </div>
-
   <script src="script.js?v=26"></script>
   <script>
     // Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Load certificates from /certs folder
-    async function loadCertificates() {
-      try {
-        const response = await fetch('/certs/');
-        const html = await response.text();
-        
-        // Parse HTML to find PDF links
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, 'text/html');
-        const links = Array.from(doc.querySelectorAll('a'))
-          .filter(a => a.href.endsWith('.pdf'))
-          .map(a => ({
-            url: a.href,
-            name: a.textContent.trim()
-          }));
-
-        if (links.length === 0) {
-          document.getElementById('certs-empty').style.display = 'block';
-          return;
-        }
-
-        const grid = document.getElementById('certs-grid');
-        grid.innerHTML = '';
-
-        for (const cert of links) {
-          const card = createCertCard(cert.url, cert.name);
-          grid.appendChild(card);
-        }
-      } catch (error) {
-        console.error('Error loading certificates:', error);
-        document.getElementById('certs-empty').style.display = 'block';
-      }
-    }
-
-    function createCertCard(pdfUrl, fileName) {
-      const card = document.createElement('div');
-      card.className = 'cert-card';
-      
-      const cleanName = fileName
-        .replace(/\.pdf$/i, '')
-        .replace(/[_-]/g, ' ')
-        .replace(/(\b\w)/g, char => char.toUpperCase());
-
-      card.innerHTML = `
-        <div class="cert-thumbnail">
-          <img src="${pdfUrl}#page=1" alt="${cleanName}" class="cert-preview" loading="lazy">
-          <div class="cert-overlay">
-            <div class="cert-overlay__icon">📖</div>
-          </div>
-        </div>
-        <p class="cert-title">${cleanName}</p>
-      `;
-
-      card.addEventListener('click', () => openLightbox(pdfUrl));
-      return card;
-    }
-
-    function openLightbox(pdfUrl) {
-      const lightbox = document.getElementById('lightbox');
-      const iframe = document.getElementById('lightbox-iframe');
-      iframe.src = pdfUrl;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      const lightbox = document.getElementById('lightbox');
-      const iframe = document.getElementById('lightbox-iframe');
-      lightbox.classList.remove('active');
-      iframe.src = '';
-      document.body.style.overflow = '';
-    }
-
-    // Lightbox close button
-    document.querySelector('.lightbox__close').addEventListener('click', closeLightbox);
-
-    // Close lightbox on background click
-    document.getElementById('lightbox').addEventListener('click', (e) => {
-      if (e.target.id === 'lightbox') {
-        closeLightbox();
-      }
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeLightbox();
-      }
-    });
-
-    // Load certs on page load
-    loadCertificates();
   </script>
   <script>
     if ('serviceWorker' in navigator) {
