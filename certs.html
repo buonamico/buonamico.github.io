@@ -78,11 +78,34 @@
       z-index: 1;
     }
 
+    .certs-year {
+      margin-bottom: 3rem;
+    }
+
+    .certs-year__heading {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-cyan);
+      text-shadow: var(--glow-cyan);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid rgba(0,229,255,0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .certs-year__heading::before {
+      content: '→';
+      color: var(--color-magenta);
+      text-shadow: var(--glow-magenta);
+    }
+
     .certs-list {
       display: flex;
       flex-direction: column;
       gap: 0.5rem;
-      margin-top: 2rem;
     }
 
     .cert-item {
@@ -123,7 +146,6 @@
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--color-text);
-      margin-bottom: 0.25rem;
       word-break: break-word;
       transition: color var(--transition);
     }
@@ -131,13 +153,6 @@
     .cert-item:hover .cert-item__name {
       color: var(--color-cyan);
       text-shadow: var(--glow-cyan);
-    }
-
-    .cert-item__type {
-      font-size: 0.75rem;
-      color: var(--color-text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
     }
 
     .cert-item__arrow {
@@ -176,6 +191,10 @@
       .cert-item__arrow {
         display: none;
       }
+
+      .certs-year__heading {
+        font-size: 1.1rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -186,59 +205,6 @@
       .cert-item__icon {
         font-size: 1.25rem;
       }
-    }
-
-    /* LIGHTBOX */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background: rgba(8, 8, 8, 0.98);
-      z-index: 1000;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(4px);
-      animation: fadeUp 0.3s ease;
-    }
-
-    .lightbox.active {
-      display: flex;
-    }
-
-    .lightbox__content {
-      position: relative;
-      width: 90%;
-      height: 90%;
-      max-width: 900px;
-    }
-
-    .lightbox__iframe {
-      width: 100%;
-      height: 100%;
-      border: 1px solid rgba(0,229,255,0.3);
-      border-radius: 4px;
-    }
-
-    .lightbox__close {
-      position: absolute;
-      top: -2.5rem;
-      right: 0;
-      background: none;
-      border: none;
-      font-size: 2rem;
-      color: var(--color-cyan);
-      cursor: pointer;
-      transition: color 0.2s ease, text-shadow 0.2s ease;
-      text-shadow: var(--glow-cyan);
-      z-index: 1;
-    }
-
-    .lightbox__close:hover {
-      color: #fff;
-    }
-
-    .lightbox__close::before {
-      content: '×';
     }
   </style>
   <script>if(!sessionStorage.getItem('booted'))document.documentElement.classList.add('is-booting')</script>
@@ -280,193 +246,239 @@
     <!-- CERTS LIST -->
     <section class="section certs-section">
       <div class="container">
-        <div class="certs-list" role="list">
-          <!-- SCRUM ALLIANCE CERTIFICATIONS -->
-          <a href="/certs/Damián%20Buonamico-ScrumAlliance_CSM_Certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Certified Scrum Master (CSM)</div>
-              <div class="cert-item__type">Scrum Alliance</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
+        
+        <!-- 2026 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2026</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2026-Python.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">💻</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2026-Python</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
 
-          <a href="/certs/Damián%20Buonamico-ScrumAlliance_CSPO_Certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Certified Scrum Product Owner (CSPO)</div>
-              <div class="cert-item__type">Scrum Alliance</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
+            <a href="/certs/2026-PTC-AI-Mastery.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🤖</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2026-PTC-AI-Mastery</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
 
-          <a href="/certs/Damián%20Buonamico-ScrumAlliance_CSD_Certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Certified Scrum Developer (CSD)</div>
-              <div class="cert-item__type">Scrum Alliance</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
+            <a href="/certs/2026-PTC-AI-Builder.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🤖</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2026-PTC-AI-Builder</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
 
-          <a href="/certs/Damián%20Buonamico-ScrumAlliance_CSP_Certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Certified Scrum Professional (CSP)</div>
-              <div class="cert-item__type">Scrum Alliance</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <!-- AGILE & COACHING CERTIFICATIONS -->
-          <a href="/certs/201806%20Agile%20Team%20Coach.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Agile Team Coach</div>
-              <div class="cert-item__type">Professional Certification</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/2017%20Coaching%20Organizacional.jpg" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Coaching Organizacional</div>
-              <div class="cert-item__type">Professional Development</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/2017-12-17%20Coach%20Ontológico.jpg" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Coach Ontológico</div>
-              <div class="cert-item__type">Professional Development</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <!-- FRAMEWORK CERTIFICATIONS -->
-          <a href="/certs/2017%20Buonamico_SAFE.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">SAFe (Scaled Agile Framework)</div>
-              <div class="cert-item__type">Framework Certification</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/2019-12-LeSS-certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">LeSS (Large Scale Scrum)</div>
-              <div class="cert-item__type">Framework Certification</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/2024-LeSS-CLP%20Buonamico.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Certified LeSS Practitioner (CLP)</div>
-              <div class="cert-item__type">Framework Certification • 2024</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/2023-EnterpriseAgilityPractitioner.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Enterprise Agility Practitioner</div>
-              <div class="cert-item__type">Framework Certification • 2023</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <!-- SPECIALIZED CERTIFICATIONS -->
-          <a href="/certs/2020-PNL.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">PNL (Neuro Linguistic Programming)</div>
-              <div class="cert-item__type">Specialized Training • 2020</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/Kleer%20-%20ATF%20-%202017.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Kleer - ATF (Agile Transformation Framework)</div>
-              <div class="cert-item__type">Specialized Training • 2017</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/Kleer%20-%20Certificado%20Examen%20-%20Damián%20Buonamico.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🎓</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Kleer Certification Exam</div>
-              <div class="cert-item__type">Specialized Training</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <!-- AI & TECHNOLOGY CERTIFICATIONS -->
-          <a href="/certs/AI%20Certificate_Damian%20Buonamico_AI%20Builder.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🤖</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">AI Builder</div>
-              <div class="cert-item__type">AI & Technology</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/AI%20Certificate_Damian%20Buonamico_AI%20Mastery.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🤖</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">AI Mastery</div>
-              <div class="cert-item__type">AI & Technology</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/Certificados_Fund._IA_Buonamico.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🤖</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Fundamentals of AI</div>
-              <div class="cert-item__type">AI & Technology</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/CertificateOfCompletion_Python%20Essential%20Training.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">💻</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Python Essential Training</div>
-              <div class="cert-item__type">Programming Skills</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <!-- LANGUAGE & OTHER -->
-          <a href="/certs/English%20Level%20%202024-02-08%20at%2013.48.45.png" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">🌐</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">English Level Certification</div>
-              <div class="cert-item__type">Language Skills • 2024</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
-
-          <a href="/certs/certificate_of_attendance.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
-            <div class="cert-item__icon">📜</div>
-            <div class="cert-item__info">
-              <div class="cert-item__name">Certificate of Attendance</div>
-              <div class="cert-item__type">Professional Development</div>
-            </div>
-            <div class="cert-item__arrow">→</div>
-          </a>
+            <a href="/certs/2026-Artificial%20Intelligence%20Fundamentalspdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🤖</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2026-Artificial Intelligence Fundamentals</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
         </div>
+
+        <!-- 2024 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2024</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2024-LeSS.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2024-LeSS</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+
+            <a href="/certs/2024-LeSS-CLP.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2024-LeSS-CLP</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2023</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2023-EnterpriseAgilityPractitioner.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2023-EnterpriseAgilityPractitioner</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2020 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2020</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2020-PNL.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2020-PNL</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2019 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2019</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2019-12-LeSS-certificate.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2019-12-LeSS-certificate</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2018 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2018</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2018-CAL.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2018-CAL</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+
+            <a href="/certs/2018-Agile-Team-Coach.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2018-Agile-Team-Coach</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2017 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2017</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2017-Professional-Coach.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2017-Professional-Coach</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+
+            <a href="/certs/2017-Leading-SAFe.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2017-Leading-SAFe</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+
+            <a href="/certs/2017-Agile-Team-Facilitator.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2017-Agile-Team-Facilitator</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2016 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2016</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2016-Coaching%20Organizacional.jpg" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2016-Coaching Organizacional</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2014 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2014</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2014-CSP.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2014-CSP</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2013 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2013</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2013-CSPO.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2013-CSPO</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2012 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2012</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2012-CSM.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2012-CSM</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+
+            <a href="/certs/2012-CSD.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2012-CSD</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2011 -->
+        <div class="certs-year">
+          <h2 class="certs-year__heading">2011</h2>
+          <div class="certs-list" role="list">
+            <a href="/certs/2011-CSD.pdf" target="_blank" rel="noopener" class="cert-item" role="listitem">
+              <div class="cert-item__icon">🎓</div>
+              <div class="cert-item__info">
+                <div class="cert-item__name">2011-CSD</div>
+              </div>
+              <div class="cert-item__arrow">→</div>
+            </a>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
